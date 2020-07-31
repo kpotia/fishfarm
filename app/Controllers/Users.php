@@ -20,21 +20,19 @@ class Users extends BaseController
 
             $errors = [
                 'password' => [
-                    'validateUsers' => " Email or Password Don\'t match"
+                    'validateUser' => "Email or Password Don't match"
                 ]
-                ];
+            ];
 
             if (! $this->validate($rules)) {
                 $data['validation'] = $this->validator;
             }else{
                 $model = new UserModel();
-                $newData = [
-                    'email' => $this->request->getVar('email'),
-                    'password' => $this->request->getVar('password'),
-                ];
-                $model->save($newData);$session = session();
-                $session->setFlashData('success','Successful Login');
-                return redirect()->to('/fishfarm_ci/public/');
+
+                $user = $model->where('email', $this->request->getVar('email'))
+                                ->first();
+                $this->setUserSession($user);
+                return redirect()->to('/fishfarm_ci/public/dashboard');
             }
         }
 
@@ -42,7 +40,18 @@ class Users extends BaseController
         echo view('login', $data);
 		
 	}
-
+    private function setUserSession($user)
+    {
+        $data = [
+            'id' => $user['id'],
+            'firstname' => $user['firstname'],
+            'lastname' => $user['lastname'],
+            'email' => $user['email'],
+            'isLoggedIn' => true,
+        ];
+        session()->set($data);
+        return true;
+    }
     public function register()
     {   
 

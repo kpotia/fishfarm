@@ -29,6 +29,14 @@
             </div>
           </div>
         </div>
+        <?php if(isset($validation)):?>
+          <div class="col-12">
+            <div class="alert alert-danger" role="alert">
+              <?= $validation->listErrors();?>
+            </div>
+          </div>
+
+        <?php endif;?>
         <div class="row">
           <!-- /.col -->
           <div class="col-4">
