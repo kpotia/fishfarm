@@ -1,6 +1,7 @@
 <?php namespace App\Controllers;
 
 use Config\Validation;
+use App\Models\UserModel;
 
 class Users extends BaseController
 {
@@ -11,7 +12,6 @@ class Users extends BaseController
 
         echo view('templates/header', $data);
         echo view('login', $data);
-        // echo view('templates/footer', $data);
 		
 	}
 
@@ -34,7 +34,16 @@ class Users extends BaseController
             if (! $this->validate($rules)) {
                 $data['validation'] = $this->validator;
             }else{
-
+                $model = new UserModel();
+                $newData = [
+                    'firstname' => $this->request->getVar('firstname'),
+                    'lastname' => $this->request->getVar('lastname'),
+                    'email' => $this->request->getVar('email'),
+                    'password' => $this->request->getVar('password'),
+                ];
+                $model->save($newData);$session = session();
+                $session->setFlashData('success','Successful Registration');
+                return redirect()->to('/');
             }
         }
 
