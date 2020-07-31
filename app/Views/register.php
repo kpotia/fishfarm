@@ -1,13 +1,17 @@
 <body class="register-page" style="min-height: 586.8px;">
 <div class="register-box">
   <div class="register-logo">
-    <a href="#"><b>Admin</b>LTE</a>
+    <a href="#"><b>Fish</b>FARM</a>
   </div>
 
   <div class="card">
     <div class="card-body register-card-body">
       <p class="login-box-msg">Register a new membership</p>
-
+<?php if(session()->get('success')): ?>
+  <div class="alert alert-success" role="alert">
+    <?= session()->get('success') ?>
+  </div>
+  <?php endif; ?>
       <form action="#" method="post">
       <div class="input-group mb-3">
           <input type="text" class="form-control" name="firstname" value="<?= set_value('firstname')?>" placeholder="Firstname">

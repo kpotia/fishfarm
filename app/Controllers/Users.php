@@ -43,7 +43,7 @@ class Users extends BaseController
                 ];
                 $model->save($newData);$session = session();
                 $session->setFlashData('success','Successful Registration');
-                return redirect()->to('/');
+                return redirect()->to('/fishfarm_ci/public/');
             }
         }
 
