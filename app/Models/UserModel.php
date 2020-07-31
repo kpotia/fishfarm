@@ -18,7 +18,7 @@ class UserModel extends Model{
     protected function beforeUpdate (array $data){
         
         // data processing 
-        
+        $data = $this->passwordHash($data);
         return $data;
     }
 
