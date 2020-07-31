@@ -1,4 +1,4 @@
-<body class="sidebar-mini layout-fixed" style="height: auto;">
+<!-- <body class="sidebar-mini layout-fixed" style="height: auto;"> -->
 
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->

@@ -12,7 +12,7 @@
     <?= session()->get('success') ?>
   </div>
       <?php endif;?>
-      <form action="" method="post">
+      <form action="#" method="post">
         <div class="input-group mb-3">
           <input type="email" class="form-control" name="email" value="<?= set_value('email')?>" placeholder="Email Address">
           <div class="input-group-append">
