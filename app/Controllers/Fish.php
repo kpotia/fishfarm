@@ -8,8 +8,7 @@ use App\Models\FishModel;
 
 class Fish extends Controller
 {
-
-    protected $helpers = [];
+    // public $fishModel = new FishModel;
 
     public function index()
 	{
@@ -25,6 +24,11 @@ class Fish extends Controller
         ];
         
         return view('FishListing',$data);
+    }
+
+    public function show()
+    {
+        // helper 
     }
 
     public function add()
