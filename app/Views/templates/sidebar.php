@@ -13,7 +13,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="info">
-        <a href="#" class="d-block"><?= $user['firstname'].' '.$user['lastname'] ?></a>
+        <a href="#" class="d-block"><?=  $session->get('firstname').' '. $session->get('firstname') ?></a>
         </div>
       </div>
 
