@@ -29,26 +29,41 @@ class Fish extends Controller
     public function show()
     {
         // helper 
+        echo 'Show';
+
     }
 
     public function add()
     {
         // helper 
+        echo 'Add';
+
     }
 
     public function store()
     {
         // helper 
+        echo 'Store';
+
     }
 
     public function edit()
     {
         // helper 
+        echo 'Edit';
+        
+
     }
 
     public function update()
     {
         // helper 
+        echo 'Update';
+    }
+
+    public function delete($id)
+    {
+        echo 'Delete fish of the ID:'.$id;
     }
 
 
