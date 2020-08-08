@@ -18,8 +18,8 @@
                         <td> <?=$fish['name'] ?></td>
                         <td> <?=$fish['description'] ?></td>
                         <td>
-                            <a href="edit/" class="btn">edit</a> 
-                            <a href="delete/" class="btn">delete</a> 
+                            <a href="fish/edit/<?=$fish['id'] ?>" class="btn">edit</a> 
+                            <a href="fish/delete/<?=$fish['id'] ?>" class="btn">delete</a> 
                         </td>
                     </tr>
                 <?php endforeach; ?>
