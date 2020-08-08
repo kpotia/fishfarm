@@ -36,6 +36,12 @@ $routes->match(['get','post'],'/register', 'Users::register');
 // Fish Routes
 $routes->group('fish',function($routes){
 	$routes->add('/','Fish::index');
+	$routes->get('/add','Fish::add');
+	$routes->post('/store','Fish::store');
+	
+	$routes->get('/edit/(:any)','Fish::edit/$1');
+	$routes->post('/update/(:any)','Fish::update/$1');
+	$routes->get('/delete/(:any)','Fish::delete/$1');
 });
 
 /**
