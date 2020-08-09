@@ -35,8 +35,8 @@ class Fish extends Controller
 
     public function add()
     {
-        // helper 
-        echo 'Add';
+        // load form 
+        return view('fishform');
 
     }
 

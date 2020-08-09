@@ -4,18 +4,12 @@ class Dashboard extends BaseController
 {
 	public function index()
 	{
-		$session = session(); 
-		$user = [
-			'id'=> $session->get('id'),
-			'firstname'=> $session->get('firstname'),
-			'lastname'=> $session->get('lastname'),
-			'email'=> $session->get('email'),			
-		];
+		$session = session();
 
 		if($session->isLoggedIn){
 			$data = [
 				'title' => 'FishFarm Dashboard',
-				'user' => $user
+				'session' => $session
 			];
 			echo view('index', $data);
 		}else {
