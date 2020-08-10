@@ -1,4 +1,4 @@
-
+<?php  $session = session(); ?>
 
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
@@ -49,7 +49,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                <a href="<?= 'fishfarm_ci/public/'.route_to('addfish')?>" class="nav-link">
                   <i class="fas fa-plus nav-icon"></i>
                   <p>Add Fish</p>
                 </a>

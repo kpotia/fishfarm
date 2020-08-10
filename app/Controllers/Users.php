@@ -32,7 +32,7 @@ class Users extends BaseController
             $user = $model->where('email', $this->request->getVar('email'))
                             ->first();
             $this->setUserSession($user);
-            return redirect()->to('/fishfarm_ci/public/dashboard');
+            return redirect()->to('dashboard');
         }
         }
 

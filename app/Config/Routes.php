@@ -36,7 +36,7 @@ $routes->match(['get','post'],'/register', 'Users::register');
 // Fish Routes
 $routes->group('fish',function($routes){
 	$routes->add('/','Fish::index');
-	$routes->get('/add','Fish::add');
+	$routes->get('/add','Fish::add', ['as'=> 'addfish']);
 	$routes->post('/store','Fish::store');
 	
 	$routes->get('/edit/(:any)','Fish::edit/$1');
