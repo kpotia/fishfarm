@@ -12,10 +12,19 @@
                 <label for="my-textarea">Fish Description</label>
                 <textarea id="my-textarea" class="form-control" required name="fishDescription" rows="3"></textarea>
             </div>
-            
+            <?php if(isset($validation)):?>
+          <div class="col-12">
+            <div class="alert alert-danger" role="alert">
+              <?= $validation->listErrors();?>
+            </div>
+          </div>
+
+        <?php endif;?>
             <div class="btn-group" role="group" aria-label="Button group">
                 <button name="submit" value="submit" >Submit</button>
             </div>
+
+
         </form>
     </div>   
 </div>

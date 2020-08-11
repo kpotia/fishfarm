@@ -40,9 +40,7 @@ class Fish extends Controller
         if($this->request->getMethod() == 'post'){
             $rules = [
                 'fishName' => 'required|min_length[3]|max_length[30]',
-                'lastname' => 'required|min_length[3]|max_length[30]',
-                // 'lastname' => 'required|min_length[3]|max_length[30]',
-    
+                'fishDescription' => 'required|min_length[3]|max_length[200]',   
             ];
     
             if (! $this->validate($rules)) {
@@ -50,10 +48,8 @@ class Fish extends Controller
             }else{
                 $model = new FishModel();
                 $newData = [
-                    'fishName' => $this->request->getVar('fishName'),
-                    'lastname' => $this->request->getVar('lastname'),
-                    // 'email' => $this->request->getVar('email'),
-                    
+                    'name' => $this->request->getVar('fishName'),
+                    'description' => $this->request->getVar('fishDescription'),                    
                 ];
                 $model->save($newData);$session = session();
                 $session->setFlashData('success','Successful Registration');
