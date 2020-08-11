@@ -8,7 +8,7 @@
                     <th>Fish ID</th>
                     <th>Fish Name</th>
                     <th>Fish Description</th>
-                    <th>Options</th>
+                    <!-- <th>Options</th> -->
                 </tr>
             </thead>
             <tbody>
@@ -17,10 +17,10 @@
                         <td> <?=$fish['id'] ?></td>
                         <td> <?=$fish['name'] ?></td>
                         <td> <?=$fish['description'] ?></td>
-                        <td>
+                        <!-- <td>
                             <a href="fish/edit/<?=$fish['id'] ?>" class="btn">edit</a> 
                             <a href="fish/delete/<?=$fish['id'] ?>" class="btn">delete</a> 
-                        </td>
+                        </td> -->
                     </tr>
                 <?php endforeach; ?>
             </tbody>
