@@ -36,12 +36,39 @@ $routes->match(['get','post'],'/register', 'Users::register');
 // Fish Routes
 $routes->group('fish',function($routes){
 	$routes->add('/','Fish::index');
-	$routes->get('/add','Fish::add', ['as'=> 'addfish']);
+	$routes->get('/add','Fish::create', ['as'=> 'addfish']);
 	$routes->post('/store','Fish::store');
 	
 	$routes->get('/edit/(:any)','Fish::edit/$1');
 	$routes->post('/update/(:any)','Fish::update/$1');
 	$routes->get('/delete/(:any)','Fish::delete/$1');
+});
+
+
+// Food Rootes
+$routes->group('food', function($routes){
+	$routes->add('/','food::index');
+	$routes->add('/','food::add');
+
+
+	$routes->group('history', function($routes){
+		$routes->add('/','foodhistory::index');
+		$routes->add('/add','foodhistory::create');
+
+	});
+});
+
+// Vaccin Rootes
+$routes->group('vaccination', function($routes){
+	$routes->add('/','food::index');
+	$routes->add('/','foodhistory::index');
+
+
+	$routes->group('history', function($routes){
+		$routes->add('/','foodhistory::index');
+		$routes->add('/add','foodhistory::create');
+
+	});
 });
 
 /**
