@@ -13,7 +13,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="info">
-        <a href="#" class="d-block"><?=  $session->get('firstname').' '. $session->get('firstname') ?></a>
+        <a href="#" class="d-block"><?=  $session->get('firstname').' '. $session->get('lastname') ?></a>
         </div>
       </div>
 
@@ -116,7 +116,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="food/history" class="nav-link">
+                <a href="<?= base_url('food/history');?>" class="nav-link">
                   
                   <i class="fas fa-list nav-icon"></i>
                   <p>
@@ -125,7 +125,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="food/history/add" class="nav-link">
+                <a href="<?php base_url('food/history/add'); ?>" class="nav-link">
                   <i class="fas fa-plus nav-icon"></i>
                   <p>Add Food History</p>
                 </a>
@@ -136,12 +136,11 @@
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-syringe"></i>
-              <p>Vaccination  </p>
+              <p>Vaccination</p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="vaccination" class="nav-link">
-                  
+                <a href="<?= base_url('vaccination') ?>" class="nav-link">
                   <i class="fas fa-list nav-icon"></i>
                   <p>
                     Vaccination listing
@@ -149,7 +148,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="vaccination/add" class="nav-link">
+                <a href="<?=base_url('vaccination/add')?>" class="nav-link">
                   <i class="fas fa-plus nav-icon"></i>
                   <p>Add Vaccination</p>
                 </a>
@@ -165,7 +164,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="vaccination/history" class="nav-link">
+                <a href="<?= base_url('vaccination/history')?>" class="nav-link">
                   
                   <i class="fas fa-list nav-icon"></i>
                   <p>
@@ -174,7 +173,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="vaccination/history/add" class="nav-link">
+                <a href="<?= base_url('vaccination/history/add');?>" class="nav-link">
                   <i class="fas fa-plus nav-icon"></i>
                   <p>Add Vaccination history</p>
                 </a>
@@ -190,7 +189,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="<?=base_url('supplier');?>" class="nav-link">
                   
                   <i class="fas fa-list nav-icon"></i>
                   <p>
@@ -199,7 +198,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="product/add" class="nav-link">
+                <a href="<?=base_url('supplier/add');?>" class="nav-link">
                   <i class="fas fa-plus nav-icon"></i>
                   <p>Add Supplier</p>
                 </a>
@@ -214,7 +213,8 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+              <a href="<?=base_url('staff');?>" class="nav-link">
+                
                   
                   <i class="fas fa-list nav-icon"></i>
                   <p>
@@ -223,7 +223,8 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="product/add" class="nav-link">
+              <a href="<?=base_url('staff/add');?>" class="nav-link">
+                
                   <i class="fas fa-plus nav-icon"></i>
                   <p>Add Staff</p>
                 </a>
@@ -231,6 +232,32 @@
               
             </ul>
           </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-money-bill-wave"></i>
+              <p>Client  </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+              <a href="<?=base_url('client');?>" class="nav-link">
+                  <i class="fas fa-list nav-icon"></i>
+                  <p>
+                    Client listing
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+              <a href="<?=base_url('client/add');?>" class="nav-link">
+                
+                  <i class="fas fa-list nav-icon"></i>
+                  <p>Add Client</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+
+         
 
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -239,7 +266,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="<?= base_url('expense')?>" class="nav-link">
                   
                   <i class="fas fa-list nav-icon"></i>
                   <p>
@@ -248,7 +275,8 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="product/add" class="nav-link">
+              <a href="<?= base_url('expense/add')?>" class="nav-link">
+                
                   <i class="fas fa-list nav-icon"></i>
                   <p>Add Expense</p>
                 </a>
@@ -258,29 +286,47 @@
           </li>
 
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="<?=base_url('report/financial')?>" class="nav-link">
               <i class="nav-icon fas fa-money-bill-wave"></i>
-              <p>Sales  </p>
+              <p>Report  </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  
+                <a href="<?=base_url('report/financial')?>" class="nav-link">
                   <i class="fas fa-list nav-icon"></i>
                   <p>
-                    Sales listing
+                    Financial Report
                   </p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="product/add" class="nav-link">
+                <a href="<?=base_url('report/fish')?>" class="nav-link">
                   <i class="fas fa-list nav-icon"></i>
-                  <p>Add Sales</p>
+                  <p>
+                    Fish Report
+                  </p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="<?=base_url('report/sales')?>" class="nav-link">
+                  <i class="fas fa-list nav-icon"></i>
+                  <p>
+                    Sales Report
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?=base_url('report/Expense')?>" class="nav-link">
+                  <i class="fas fa-list nav-icon"></i>
+                  <p>
+                    Expense Report
+                  </p>
+                </a>
+              </li>             
               
             </ul>
           </li>
+
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-receipt"></i>
@@ -288,7 +334,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="<?= base_url('product') ?>" class="nav-link">
                   
                   <i class="fas fa-list nav-icon"></i>
                   <p>
@@ -297,13 +343,26 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="product/add" class="nav-link">
-                  <i class="fas fa-list nav-icon"></i>
+              <a href="<?= base_url('product/add') ?>" class="nav-link">
+<i class="fas fa-list nav-icon"></i>
                   <p>Add Purchase</p>
                 </a>
               </li>
               
             </ul>
+          </li>
+          <li class="nav-item">
+          <a href="<?= base_url('seting'); ?>" class="nav-link">
+            
+              <i class="nav-icon fas fa-cog"></i>
+              <p>Setting</p>
+            </a>            
+          </li>
+          <li class="nav-item">
+            <a href="<?php base_url('logout'); ?>" class="nav-link">
+              <i class="nav-icon fas fa-sign-out"></i>
+              <p>Logout  </p>
+            </a>            
           </li>
           
    
