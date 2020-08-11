@@ -24,11 +24,10 @@
                with font-awesome or any other icon font library -->
           
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="<?= base_url('dashboard');?>" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Dashboard
-
               </p>
             </a>
           </li>
@@ -40,7 +39,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+              <a href="<?= base_url('fish')?>" class="nav-link">
                   
                   <i class="fas fa-list nav-icon"></i>
                   <p>
@@ -49,7 +48,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= 'fishfarm_ci/public/'.route_to('addfish')?>" class="nav-link">
+                <a href="<?= base_url('fish/add')?>" class="nav-link">
                   <i class="fas fa-plus nav-icon"></i>
                   <p>Add Fish</p>
                 </a>
@@ -65,7 +64,8 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+              <a href="<?= base_url('product'); ?>" class="nav-link">
+                
                   
                   <i class="fas fa-list nav-icon"></i>
                   <p>
@@ -74,9 +74,36 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+              <a href="<?= base_url('product/add'); ?>" class="nav-link">
+                
                   <i class="fas fa-plus nav-icon"></i>
                   <p>Add Product</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-utensils"></i>
+              <p>Food  </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+              <a href="<?= base_url('food'); ?>" class="nav-link">
+                
+                  
+                  <i class="fas fa-list nav-icon"></i>
+                  <p>
+                    Food listing
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url('food/add'); ?>" class="nav-link">
+                  <i class="fas fa-plus nav-icon"></i>
+                  <p>Add Food </p>
                 </a>
               </li>
               
@@ -89,7 +116,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="food/history" class="nav-link">
                   
                   <i class="fas fa-list nav-icon"></i>
                   <p>
@@ -98,7 +125,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                <a href="food/history/add" class="nav-link">
                   <i class="fas fa-plus nav-icon"></i>
                   <p>Add Food History</p>
                 </a>
@@ -113,7 +140,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="vaccination" class="nav-link">
                   
                   <i class="fas fa-list nav-icon"></i>
                   <p>
@@ -122,9 +149,34 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                <a href="vaccination/add" class="nav-link">
                   <i class="fas fa-plus nav-icon"></i>
                   <p>Add Vaccination</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-syringe"></i>
+              <p>Vaccination History </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="vaccination/history" class="nav-link">
+                  
+                  <i class="fas fa-list nav-icon"></i>
+                  <p>
+                    Vaccination history listing
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="vaccination/history/add" class="nav-link">
+                  <i class="fas fa-plus nav-icon"></i>
+                  <p>Add Vaccination history</p>
                 </a>
               </li>
               
@@ -147,7 +199,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                <a href="product/add" class="nav-link">
                   <i class="fas fa-plus nav-icon"></i>
                   <p>Add Supplier</p>
                 </a>
@@ -171,7 +223,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                <a href="product/add" class="nav-link">
                   <i class="fas fa-plus nav-icon"></i>
                   <p>Add Staff</p>
                 </a>
@@ -196,7 +248,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                <a href="product/add" class="nav-link">
                   <i class="fas fa-list nav-icon"></i>
                   <p>Add Expense</p>
                 </a>
@@ -221,7 +273,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                <a href="product/add" class="nav-link">
                   <i class="fas fa-list nav-icon"></i>
                   <p>Add Sales</p>
                 </a>
@@ -245,7 +297,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                <a href="product/add" class="nav-link">
                   <i class="fas fa-list nav-icon"></i>
                   <p>Add Purchase</p>
                 </a>
