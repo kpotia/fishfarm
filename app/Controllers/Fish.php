@@ -28,7 +28,7 @@ class Fish extends Controller
         return view('FishListing',$data);
     }
 
-    public function add()
+    public function create()
     {
         $session = session();
 
