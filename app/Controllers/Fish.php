@@ -61,23 +61,35 @@ class Fish extends Controller
 
     }
 
-    public function edit()
+    public function edit($id)
     {
-        // helper 
-        echo 'Edit';
-        
+        $model = new FishModel();
+        $session = session();
+        //   fetch data
+        $fish = $model($id);
+        $data = [
+            'title' => 'Update Fish Details',
+            'fish' => $fish
+        ];
+    // load form with fetch data 
+    echo view('fishform',$data);
 
-    }
+    // validate form data 
+    // update data
 
-    public function update()
-    {
-        // helper 
-        echo 'Update';
     }
 
     public function delete($id)
     {
-        echo 'Delete fish of the ID:'.$id;
+        $model = new FishModel();
+        $session = session();
+        
+        if($model->delete($id)){
+                $session->setFlashData('success','Successful Deletion');}
+        else{
+            $session->setFlashData('fail','deletion failed');
+        }
+                return redirect()->to('/fishfarm_ci/public/fish');
     }
 
 
