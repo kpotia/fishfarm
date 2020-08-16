@@ -352,7 +352,7 @@
             </ul>
           </li>
           <li class="nav-item">
-          <a href="<?= base_url('seting'); ?>" class="nav-link">
+          <a href="<?= base_url('setting'); ?>" class="nav-link">
             
               <i class="nav-icon fas fa-cog"></i>
               <p>Setting</p>
