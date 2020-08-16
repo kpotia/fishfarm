@@ -52,7 +52,7 @@ class Fish extends Controller
                     'description' => $this->request->getVar('fishDescription'),                    
                 ];
                 $model->save($newData);$session = session();
-                $session->setFlashData('success','Successful Registration');
+                $session->setFlashData('success','Fish Added successfully');
                 return redirect()->to('/fishfarm_ci/public/fish');
             }
         }
