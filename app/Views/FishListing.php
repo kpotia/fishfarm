@@ -2,7 +2,17 @@
 
 <?= $this->section('content') ?>
     <div class="row">
-        <table class='table '>
+
+    <div class="col-10 bg-white">
+    <?php if(session()->get('success')): ?>
+  <div class="alert alert-success" role="alert">
+    <?= session()->get('success') ?>
+  </div>
+    <?php elseif(session()->get('fail')): ?>
+    <?= session()->get('fail') ?>
+
+      <?php endif;?>
+    <table class='table table-responsive table-hover '>
             <thead>
                 <tr>
                     <th>Fish ID</th>
@@ -25,5 +35,7 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
+    </div>
+        
     </div>
 <?= $this->endSection() ?>
