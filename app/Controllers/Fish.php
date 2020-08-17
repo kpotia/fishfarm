@@ -63,19 +63,30 @@ class Fish extends Controller
 
     public function edit($id)
     {
+        helper('form');
         $model = new FishModel();
         $session = session();
         //   fetch data
-        $fish = $model($id);
+        $fish = $model->find($id);
         $data = [
             'title' => 'Update Fish Details',
-            'fish' => $fish
+            'fish' => $fish,
+            'action' => 'update'
         ];
     // load form with fetch data 
     echo view('fishform',$data);
 
     // validate form data 
     // update data
+    if($this->request->getMethod() == 'post'){
+        $fishUpdate = [
+            'name' => $this->request->getVar('fishName'),
+            'description' => $this->request->getVar('fishDescription')
+        ];
+        $model->db->table('fish')->update($fishUpdate, ['id' => $id]);
+        $session->setFlashData('success','Fish Data Updated');
+                return redirect()->to('/fishfarm_ci/public/fish');
+    }
 
     }
 
