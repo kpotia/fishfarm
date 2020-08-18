@@ -59,6 +59,31 @@
 
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-fish"></i>
+              <p>Fish  </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+              <a href="<?= base_url('fish/tank')?>" class="nav-link">
+                  
+                  <i class="fas fa-list nav-icon"></i>
+                  <p>
+                    Fish listing
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url('fish/tank/add')?>" class="nav-link">
+                  <i class="fas fa-plus nav-icon"></i>
+                  <p>Add Fish</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
               <i class="nav-icon fab fa-product-hunt"></i>
               <p>Product  </p>
             </a>
