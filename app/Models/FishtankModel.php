@@ -2,20 +2,16 @@
 
 use CodeIgniter\Model;
 
-class FishModel extends Model
+class FishtankModel extends Model
 {
-    protected $table      = 'fish';
-    protected $primaryKey = 'id';
+    protected $table      = 'fish_tank';
+    protected $primaryKey = 'tk_id';
 
     protected $returnType     = 'array';
     protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['name', 'description','photo'];
+    protected $allowedFields = ['fish_id', 'qty','birthdate'];
 
-    protected $useTimestamps = false;
-    protected $createdField  = 'created_at';
-    protected $updatedField  = 'updated_at';
-    protected $deletedField  = 'deleted_at';
 
     protected $validationRules    = [];
     protected $validationMessages = [];
