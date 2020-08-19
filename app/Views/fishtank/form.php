@@ -7,7 +7,7 @@
 
                 <div class="form-group">
                     <label for="my-select">Text</label>
-                    <select  class="form-control" name="fish_id">
+                    <select  class="form-control" name="fish_id" disabled>
                         <?php foreach($fishes as $fish): ?>
                             <option value="<?=$fish['id']?>"><?=$fish['name']?></option>
                         <?php endforeach;?>
@@ -19,7 +19,7 @@
                 </div>
                 <div class="form-group">
                     <label for="birthdate">Birthdate</label>
-                    <input id="birthdate" class="form-control" type="date" name="birthdate">
+                    <input id="birthdate" class="form-control" type="date" name="date">
                 </div>
            
             <?php if(isset($validation)):?>

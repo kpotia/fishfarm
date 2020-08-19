@@ -21,7 +21,7 @@ class FishTank extends Controller
 
         $data = [
             'title' => 'Fish Listing',
-            'fishes' => $fishes,
+            'fishtank' => $fishes,
             'session' => $session
         ];
 
@@ -54,16 +54,16 @@ class FishTank extends Controller
             if (! $this->validate($rules)) {
                 $data['validation'] = $this->validator;
             }else{
-                $model = new FishModel();
+                $model = new FishtankModel();
                 $newData = [
                     'fish_id' => $this->request->getVar('fish_id'),
                     'qty' => $this->request->getVar('qty'),                    
-                    'birthdate' => $this->request->getVar('birthdate'),                    
+                    'birthdate' => $this->request->getVar('date'),                    
                 ];
                 $model->save($newData);
                 $session = session();
                 $session->setFlashData('success','Fish Added successfully');
-                return redirect()->to('/fishfarm_ci/public/fish');
+                return redirect()->to('/fishfarm_ci/public/fish/tank');
             }
 
         }
@@ -111,7 +111,7 @@ class FishTank extends Controller
         else{
             $session->setFlashData('fail','deletion failed');
         }
-                return redirect()->to('/fishfarm_ci/public/fish');
+                return redirect()->to('/fishfarm_ci/public/fish/tank');
     }
 
 

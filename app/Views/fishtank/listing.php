@@ -25,13 +25,12 @@
             <tbody>
                 <?php foreach($fishtank as $ft): ?>
                     <tr>
-                        <td> <?=$ft['id'] ?></td>
-                        <td> <?=$ft['Fishname'] ?></td>
+                        <td> <?=$ft['tk_id'] ?></td>
+                        <td> <?=$ft['fish_id'] ?></td>
                         <td> <?=$ft['qty'] ?></td>
                         <td> <?=$ft['birthdate'] ?></td>
                         <td>
-                            <a href="fish/tank/edit/<?=$ft['id'] ?>" class="btn">edit</a> 
-                            <a href="fish/tank/delete/<?=$ft['id'] ?>" class="btn">delete</a> 
+                            <a href="<?= base_url('fish/tank/delete/'.$ft['tk_id']) ?>" class="btn">delete</a> 
                         </td>
                     </tr>
                 <?php endforeach; ?>

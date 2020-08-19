@@ -20,7 +20,7 @@ class Fish extends Controller
 
         $data = [
             'title' => 'Fish Listing',
-            'fishtank' => $fishes,
+            'fishes' => $fishes,
             'session' => $session
         ];
 
