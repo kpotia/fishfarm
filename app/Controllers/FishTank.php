@@ -3,10 +3,11 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\FishtankModel;
+use App\Models\FishModel;
 
 
 
-class Fishtank extends Controller
+class FishTank extends Controller
 {
     // public $FishtankModel = new FishtankModel;
 
@@ -25,39 +26,49 @@ class Fishtank extends Controller
         ];
 
         
-        return view('FishtankListing',$data);
+        return view('fishtank/listing',$data);
     }
 
     public function create()
     {
         $session = session();
+        $model = new FishModel();
 
+        $fishes = $model->findAll();
+        helper('form');
         $data = [
             'title' => 'Add Fish Tank',
-            'session' => $session
+            'session' => $session,
+            'fishes' => $fishes
         ];
         // load form 
         if($this->request->getMethod() == 'post'){
+
+            // validate data
             $rules = [
-                'fishName' => 'required|min_length[3]|max_length[30]',
-                'fishDescription' => 'required|min_length[3]|max_length[200]',   
+                'fish_id' => 'required',
+                'qty' => 'required',
+                'date' => 'required',
             ];
-    
+            // save data 
             if (! $this->validate($rules)) {
                 $data['validation'] = $this->validator;
             }else{
-                $model = new FishtankModel();
+                $model = new FishModel();
                 $newData = [
-                    'name' => $this->request->getVar('fishName'),
-                    'description' => $this->request->getVar('fishDescription'),                    
+                    'fish_id' => $this->request->getVar('fish_id'),
+                    'qty' => $this->request->getVar('qty'),                    
+                    'birthdate' => $this->request->getVar('birthdate'),                    
                 ];
-                $model->save($newData);$session = session();
+                $model->save($newData);
+                $session = session();
                 $session->setFlashData('success','Fish Added successfully');
                 return redirect()->to('/fishfarm_ci/public/fish');
             }
+
         }
         
-        return view('fishform');
+        return view('fishtank/form', $data);
 
     }
 

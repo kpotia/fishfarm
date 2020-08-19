@@ -41,7 +41,7 @@ $routes->group('fish',function($routes){
 	$routes->get('/delete/(:any)','Fish::delete/$1');
 	$routes->group('tank', function($routes){
 		$routes->add('/','FishTank::index');
-		$routes->match(['get','post'],'/add','FishTank::add');
+		$routes->match(['get','post'],'/add','FishTank::create');
 	});
 });
 
