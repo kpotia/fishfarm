@@ -56,8 +56,8 @@ $routes->group('food', function($routes){
 
 
 	$routes->group('history', function($routes){
-		$routes->add('/','foodhistory::index');
-		$routes->match(['get','post'],'add','foodhistory::create');
+		$routes->add('/','FoodHistory::index');
+		$routes->match(['get','post'],'add','FoodHistory::create');
 
 	});
 });
