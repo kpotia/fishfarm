@@ -7,20 +7,13 @@
 
                 <div class="form-group">
                     <label for="my-select">Text</label>
-                    <select  class="form-control" name="fish_id">
-                        <?php foreach($fishes as $fish): ?>
-                            <option value="<?=$fish['id']?>"><?=$fish['name']?></option>
-                        <?php endforeach;?>
-                    </select>
+                   <input class="form-control" type="text" name="FoodName">
                 </div>
                 <div class="form-group">
                     <label for="my-select">Qantity</label>
-                    <input class="form-control" type="number" min='0' name="qty">
+                    <input class="form-control" type="number" min='0' name="Foodqty">
                 </div>
-                <div class="form-group">
-                    <label for="birthdate">Birthdate</label>
-                    <input id="birthdate" class="form-control" type="date" name="birthdate">
-                </div>
+               
            
             <?php if(isset($validation)):?>
           <div class="col-12">

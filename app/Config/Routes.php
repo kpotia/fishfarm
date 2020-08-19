@@ -36,9 +36,9 @@ $routes->match(['get','post'],'/register', 'Users::register');
 // Fish Routes
 $routes->group('fish',function($routes){
 	$routes->add('/','Fish::index');
-	$routes->match(['get','post'],'/add','Fish::create');	
+	$routes->match(['get','post'],'add','Fish::create');	
 	$routes->match(['get','post'],'/edit/(:any)','Fish::edit/$1');
-	$routes->get('/delete/(:any)','Fish::delete/$1');
+	$routes->get('delete/(:any)','Fish::delete/$1');
 	
 	$routes->group('tank', function($routes){
 		$routes->add('/','FishTank::index');
@@ -52,12 +52,12 @@ $routes->group('fish',function($routes){
 // Food Rootes
 $routes->group('food', function($routes){
 	$routes->add('/','food::index');
-	$routes->match(['get','post'],'/','food::add');
+	$routes->match(['get','post'],'add','food::create');
 
 
 	$routes->group('history', function($routes){
 		$routes->add('/','foodhistory::index');
-		$routes->match(['get','post'],'/add','foodhistory::create');
+		$routes->match(['get','post'],'add','foodhistory::create');
 
 	});
 });
@@ -65,11 +65,11 @@ $routes->group('food', function($routes){
 // Vaccin Rootes
 $routes->group('vaccination', function($routes){
 	$routes->add('/','food::index');
-	$routes->match(['get','post'],'/add','food::add');
+	$routes->match(['get','post'],'add','food::add');
 
 	$routes->group('history', function($routes){
 		$routes->add('/','foodhistory::index');
-		$routes->match(['get','post'],'/add','foodhistory::create');
+		$routes->match(['get','post'],'add','foodhistory::create');
 
 	});
 });
