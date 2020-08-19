@@ -6,7 +6,7 @@
         <form action="" method="post">
 
                 <div class="form-group">
-                    <label for="my-select">Text</label>
+                    <label for="my-select">Food Name</label>
                    <input class="form-control" type="text" name="FoodName">
                 </div>
                 <div class="form-group">

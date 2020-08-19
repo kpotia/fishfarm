@@ -49,15 +49,15 @@ class Food extends Controller
                 $model = new FoodModel();
                 $newData = [
                     'name' => $this->request->getVar('FoodName'),
-                    'description' => $this->request->getVar('Foodqty'),                    
+                    'qty' => $this->request->getVar('Foodqty'),                    
                 ];
                 $model->save($newData);$session = session();
                 $session->setFlashData('success','Food Added successfully');
-                return redirect()->to('/Foodfarm_ci/public/Food');
+                return redirect()->to('/fishfarm_ci/public/food');
             }
         }
         
-        return view('food/form');
+        return view('food/form', $data);
 
     }
 
@@ -85,7 +85,7 @@ class Food extends Controller
         ];
         $model->db->table('Food')->update($FoodUpdate, ['id' => $id]);
         $session->setFlashData('success','Food Data Updated');
-                return redirect()->to('/Foodfarm_ci/public/Food');
+                return redirect()->to('/fishfarm_ci/public/food');
     }
 
     }
@@ -100,7 +100,7 @@ class Food extends Controller
         else{
             $session->setFlashData('fail','deletion failed');
         }
-                return redirect()->to('/Foodfarm_ci/public/Food');
+                return redirect()->to('/fishfarm_ci/public/food');
     }
 
 
