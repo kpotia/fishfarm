@@ -75,12 +75,20 @@ $routes->group('vaccination', function($routes){
 });
 
 // staff
+$routes->group('staff', function($routes){
+	$routes->add('/','staff::index');
+});
 // client
 // product
 // sales
 // purchase
 // expenses
 // supplier
+// setting
+$routes->group('setting', function($routes){
+	$routes->add('/','setting::index');
+	$routes->add('backup','setting::backup');
+});
 
 /**
  * --------------------------------------------------------------------
