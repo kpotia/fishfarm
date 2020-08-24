@@ -81,6 +81,12 @@ $routes->group('staff', function($routes){
 // sales
 // purchase
 // expenses
+$routes->group('expense',function($routes){
+	$routes->add('/','Expense::index');
+	$routes->match(['get','post'],'add','Expense::create');	
+	$routes->match(['get','post'],'edit/(:any)','Expense::edit/$1');
+	$routes->get('delete/(:any)','Expense::delete/$1');
+});
 // supplier
 $routes->group('supplier',function($routes){
 	$routes->add('/','Supplier::index');
