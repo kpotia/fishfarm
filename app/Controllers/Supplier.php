@@ -3,13 +3,11 @@
 use CodeIgniter\Controller;
 use App\Models\SupplierModel;
 
-class Supplier extends BaseController
+class Supplier extends Controller
 {
 	public function index()
     {
     //    initialise data array
-        
-
         $supplierM = new SupplierModel();
         $suppliers = $supplierM->findAll();
         $session = session();
@@ -17,18 +15,19 @@ class Supplier extends BaseController
         $data = [
             'title' => 'Suppliers',
             'session' => $session,
-            'supplier' => $suppliers,
+            'suppliers' => $suppliers,
         ];
         return view('supplier/listing',$data);
     }
 
-    public function add(){
+    public function create(){
         $session = session();
-
+        helper('form');
         $data = [
-            'title' => 'Suppliers',
+            'title' => 'Add Suppliers',
             'session' => $session,
         ];
+        // return var_dump($data);
 
         if($this->request->getMethod() == 'post'){
             $rules = [
@@ -55,8 +54,7 @@ class Supplier extends BaseController
                 return redirect()->to('/fishfarm_ci/public/supplier');
             }
         }
-        view('supplier/form',$data);
-
+        return view('supplier/form', $data);
 
     }
 
@@ -73,10 +71,9 @@ class Supplier extends BaseController
             'action' => 'update'
         ];
         // load form with fetch data 
-        echo view('fishform',$data);
+        echo view('supplier/form',$data);
 
-        // validate form data 
-        // update data
+        // 
         if($this->request->getMethod() == 'post'){
             $model = new SupplierModel();
             $supplierUpdate = [
@@ -86,11 +83,23 @@ class Supplier extends BaseController
                 'email' => $this->request->getVar('email'),                    
                 'address' => $this->request->getVar('address'),                    
             ];
-            $model->db->table('fish')->update($supplierUpdate, ['id' => $id]);
-            $session->setFlashData('success','Fish Data Updated');
-                    return redirect()->to('/fishfarm_ci/public/fish');
+            $model->db->table('supplier')->update($supplierUpdate, ['id' => $id]);
+            $session->setFlashData('success','Supplier Data Updated');
+            return redirect()->to('/fishfarm_ci/public/supplier');
+        }
     }
 
+    public function delete($id)
+    {
+        $model = new SupplierModel();
+        $session = session();
+        
+        if($model->delete($id)){
+                $session->setFlashData('success','Successful Deletion');}
+        else{
+            $session->setFlashData('fail','deletion failed');
+        }
+        return redirect()->to('/fishfarm_ci/public/supplier');
     }
 
 
