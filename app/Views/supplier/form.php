@@ -25,7 +25,7 @@
 
             <div class="form-group">
                 <label for="my-textarea">Supplier Description</label>
-                <textarea id="my-textarea" class="form-control" required name="Description" rows="3"><?= $supplier['description'] ?? set_value('description')?></textarea>
+                <textarea id="my-textarea" class="form-control" required name="description" rows="3"><?= $supplier['description'] ?? set_value('description')?></textarea>
             </div>
             
             <?php if(isset($validation)):?>
