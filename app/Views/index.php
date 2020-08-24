@@ -6,7 +6,7 @@
             <!-- small card -->
             <div class="small-box bg-primary">
                 <div class="inner">
-                <h3>44</h3>
+                <h3>4</h3>
 
                 <p>Fish</p>
                 </div>
@@ -23,7 +23,7 @@
             <!-- small card -->
             <div class="small-box bg-primary">
                 <div class="inner">
-                <h3>44</h3>
+                <h3>700</h3>
 
                 <p>Product</p>
                 </div>
@@ -39,41 +39,11 @@
             <!-- small card -->
             <div class="small-box bg-primary">
                 <div class="inner">
-                <h3>44</h3>
+                <h3>16</h3>
                 <p>Staff</p>
                 </div>
                 <div class="icon">
                 <i class="fas fa-users"></i>
-                </div>
-                <a href="#" class="small-box-footer">
-                More info <i class="fas fa-arrow-circle-right"></i>
-                </a>
-            </div>
-        </div>
-        <div class="col-lg-2 col-6">
-            <!-- small card -->
-            <div class="small-box bg-primary">
-                <div class="inner">
-                <h3>44</h3>
-                <p>Food History</p>
-                </div>
-                <div class="icon">
-                <i class="fas fa-users"></i>
-                </div>
-                <a href="#" class="small-box-footer">
-                More info <i class="fas fa-arrow-circle-right"></i>
-                </a>
-            </div>
-        </div>
-        <div class="col-lg-2 col-6">
-            <!-- small card -->
-            <div class="small-box bg-primary">
-                <div class="inner">
-                <h3>44</h3>
-                <p>Vaccines</p>
-                </div>
-                <div class="icon">
-                <i class="fas fa-syringe"></i>
                 </div>
                 <a href="#" class="small-box-footer">
                 More info <i class="fas fa-arrow-circle-right"></i>
@@ -99,11 +69,11 @@
 
         
         
-        <div class="col-lg-3 col-6">
+        <div class="col-lg-4 col-6">
             <!-- small card -->
-            <div class="small-box bg-warning">
+            <div class="small-box bg-danger">
                 <div class="inner">
-                <h3>44</h3>
+                <h3>3500 XOF</h3>
 
                 <p>Expenses</p>
                 </div>
@@ -115,11 +85,11 @@
                 </a>
             </div>
         </div>
-        <div class="col-lg-3 col-6">
+        <div class="col-lg-4 col-6">
             <!-- small card -->
-            <div class="small-box bg-warning">
+            <div class="small-box bg-success">
                 <div class="inner">
-                <h3>44</h3>
+                <h3>14000 XOF</h3>
 
                 <p>Sales</p>
                 </div>
@@ -131,11 +101,11 @@
                 </a>
             </div>
         </div>
-        <div class="col-lg-3 col-6">
+        <div class="col-lg-4 col-6">
             <!-- small card -->
             <div class="small-box bg-warning">
                 <div class="inner">
-                <h3>44</h3>
+                <h3>4000 XOF</h3>
 
                 <p>Purchase</p>
                 </div>
