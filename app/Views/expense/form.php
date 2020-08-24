@@ -1,5 +1,5 @@
 <?= $this->extend('templates/dashboard') ?>
-<!-- food form -->
+<!-- Expense form -->
 <?= $this->section('content') ?>
 <div class="row">
     <div class="col-md-6">
