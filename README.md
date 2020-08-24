@@ -1,8 +1,19 @@
 # FishFarm Management System
 
+The fishfarm is a web application developed using a PHP framework
+named Codeigniter.MYSQL is used as database.
+ the fishfarm will be used to ease the record
+keeping process of the fishfarm.
+
 ## What is Fishfarm
 
 ## Setup
+-create database fishfarm
+-update the `.env` file and set the variable such as:
+    -database
+    -baseurl
+    -environment variable
+    -etc.
 
 ## Important Change with index.php
 
