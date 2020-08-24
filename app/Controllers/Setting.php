@@ -9,7 +9,7 @@ class Setting extends BaseController
     }
 
     // list backup
-    public function lustbackup(){
+    public function listbackup(){
         // load helper n libraries 
 
         // go to folder 
