@@ -5,21 +5,15 @@ named Codeigniter.MYSQL is used as database.
  the fishfarm will be used to ease the record
 keeping process of the fishfarm.
 
-## What is Fishfarm
-
 ## Setup
+
+follow this step to setup the system
 -create database fishfarm
 -update the `.env` file and set the variable such as:
     -database
     -baseurl
     -environment variable
     -etc.
-
-## Important Change with index.php
-
-
-## Repository Management
-
 
 ## Server Requirements
 
