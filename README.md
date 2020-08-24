@@ -15,6 +15,20 @@ follow this step to setup the system
     -environment variable
     -etc.
 
+## Todo
+[] Fish:
+[] Fish Tank:
+[] Food:
+[] Food History:
+[] Vaccine:
+[] Vaccine History:
+
+[] Expenses:
+[] Supplier:
+[] Purchase:
+[] Sales:
+
+
 ## Server Requirements
 
 PHP version 7.2 or higher is required, with the following extensions installed:
