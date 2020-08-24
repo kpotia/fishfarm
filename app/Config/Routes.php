@@ -37,7 +37,7 @@ $routes->match(['get','post'],'/register', 'Users::register');
 $routes->group('fish',function($routes){
 	$routes->add('/','Fish::index');
 	$routes->match(['get','post'],'add','Fish::create');	
-	$routes->match(['get','post'],'/edit/(:any)','Fish::edit/$1');
+	$routes->match(['get','post'],'edit/(:any)','Fish::edit/$1');
 	$routes->get('delete/(:any)','Fish::delete/$1');
 	
 	$routes->group('tank', function($routes){
@@ -53,8 +53,6 @@ $routes->group('fish',function($routes){
 $routes->group('food', function($routes){
 	$routes->add('/','food::index');
 	$routes->match(['get','post'],'add','food::create');
-
-
 	$routes->group('history', function($routes){
 		$routes->add('/','FoodHistory::index');
 		$routes->match(['get','post'],'add','FoodHistory::create');
@@ -87,7 +85,7 @@ $routes->group('staff', function($routes){
 $routes->group('supplier',function($routes){
 	$routes->add('/','Supplier::index');
 	$routes->match(['get','post'],'add','Supplier::create');	
-	$routes->match(['get','post'],'/edit/(:any)','Supplier::edit/$1');
+	$routes->match(['get','post'],'edit/(:any)','Supplier::edit/$1');
 	$routes->get('delete/(:any)','Supplier::delete/$1');
 });
 
