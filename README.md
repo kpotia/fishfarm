@@ -8,12 +8,12 @@ keeping process of the fishfarm.
 ## Setup
 
 follow this step to setup the system
--create database fishfarm
--update the `.env` file and set the variable such as:
-    -database
-    -baseurl
-    -environment variable
-    -etc.
+- create database fishfarm
+- update the `.env` file and set the variable such as:
+    - database
+    - baseurl
+    - environment variable
+    - etc.
 
 ## Todo
 [] Fish:
@@ -22,7 +22,6 @@ follow this step to setup the system
 [] Food History:
 [] Vaccine:
 [] Vaccine History:
-
 [] Expenses:
 [] Supplier:
 [] Purchase:
