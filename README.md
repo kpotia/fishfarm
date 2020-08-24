@@ -18,16 +18,27 @@ follow this step to setup the system
 
 ## Todo
 
-- [ ] Fish:
-- [ ] Fish Tank:
-- [ ] Food:
+- [x] Fish: add,edit,update fish details
+- [x] Fish Tank: add,edit,update fish tank details
+- [x] Food: add, edit, delete food
 - [ ] Food History:
-- [ ] Vaccine:
-- [ ] Vaccine History:
+  - [ ] fh listing
+  - [ ] add food history
+  - [ ] view food history
+- [x] Vaccine:
+- [x] Vaccine History:
+  - [ ] VH listing
+  - [ ] add VH
+  - [ ] view VH
+  - [ ] view VH
 - [ ] Expenses:
-- [ ] Supplier:
+- [x] Supplier:
 - [ ] Purchase:
+- [ ] Product:
 - [ ] Sales:
+- [ ] Client:
+- [ ] Setting:
+- [ ] backup:
 
 ## Server Requirements
 
