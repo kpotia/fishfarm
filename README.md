@@ -2,7 +2,7 @@
 
 The fishfarm is a web application developed using a PHP framework
 named Codeigniter.MYSQL is used as database.
- the fishfarm will be used to ease the record
+the fishfarm will be used to ease the record
 keeping process of the fishfarm.
 
 ## Setup
@@ -25,12 +25,11 @@ follow this step to setup the system
 - [x] Supplier:
 - [x] Client:
 - [x] Staff :
-- [ ]  Vaccine History:
+- [ ] Vaccine History:
   - [ ] VH listing
   - [ ] add VH
   - [ ] view VH
   - [ ] view VH
-
 - [ ] Food History:
   - [ ] fh listing
   - [ ] add food history
