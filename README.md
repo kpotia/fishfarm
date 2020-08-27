@@ -25,6 +25,7 @@ follow this step to setup the system
 - [x] Supplier:
 - [x] Client:
 - [x] Staff :
+- [x] Product:
 - [ ] Vaccine History:
   - [ ] VH listing
   - [ ] add VH
@@ -36,8 +37,8 @@ follow this step to setup the system
   - [ ] view food history
 - [ ] Expenses:
 - [ ] Purchase:
-- [ ] Product:
 - [ ] Sales:
+  - [ ] order management 
 - [ ] Setting:
 - [ ] backup:
 

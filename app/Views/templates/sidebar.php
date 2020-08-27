@@ -359,7 +359,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= base_url('product') ?>" class="nav-link">
+                <a href="<?= base_url('purchase') ?>" class="nav-link">
                   
                   <i class="fas fa-list nav-icon"></i>
                   <p>
@@ -368,7 +368,7 @@
                 </a>
               </li>
               <li class="nav-item">
-              <a href="<?= base_url('product/add') ?>" class="nav-link">
+              <a href="<?= base_url('purchase/add') ?>" class="nav-link">
 <i class="fas fa-list nav-icon"></i>
                   <p>Add Purchase</p>
                 </a>
@@ -384,13 +384,13 @@
             </a>            
           </li>
           <li class="nav-item">
-            <a href="<?php base_url('logout'); ?>" class="nav-link">
-              <i class="nav-icon fas fa-sign-out"></i>
-              <p>Logout  </p>
+          <a href="<?= base_url('logout'); ?>" class="nav-link">
+            
+              <i class="nav-icon fas fa-cog"></i>
+              <p>Logout</p>
             </a>            
           </li>
           
-   
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
