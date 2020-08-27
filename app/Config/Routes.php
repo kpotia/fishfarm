@@ -35,7 +35,7 @@ $routes->match(['get','post'],'logout', 'Users::logout');
 $routes->match(['get','post'],'register', 'Users::register');
 
 // Fish Routes
-$routes->group('fish',function($routes){
+$routes->group('fish',['filter' => 'auth'],function($routes){
 	$routes->add('/','Fish::index');
 	$routes->match(['get','post'],'add','Fish::create');	
 	$routes->match(['get','post'],'edit/(:any)','Fish::edit/$1');
@@ -51,7 +51,7 @@ $routes->group('fish',function($routes){
 
 
 // Food Rootes
-$routes->group('food', function($routes){
+$routes->group('food',['filter' => 'auth'], function($routes){
 	$routes->add('/','food::index');
 	$routes->match(['get','post'],'add','food::create');
 	$routes->group('history', function($routes){
@@ -62,7 +62,7 @@ $routes->group('food', function($routes){
 });
 
 // Vaccin Rootes
-$routes->group('vaccination', function($routes){
+$routes->group('vaccination',['filter' => 'auth'], function($routes){
 	$routes->add('/','food::index');
 	$routes->match(['get','post'],'add','food::add');
 
@@ -74,7 +74,7 @@ $routes->group('vaccination', function($routes){
 });
 
 // staff
-$routes->group('staff', function($routes){
+$routes->group('staff', ['filter' => 'auth'],function($routes){
 	$routes->add('/','staff::index');
 });
 // client
@@ -82,14 +82,14 @@ $routes->group('staff', function($routes){
 // sales
 // purchase
 // expenses
-$routes->group('expense',function($routes){
+$routes->group('expense',['filter' => 'auth'],function($routes){
 	$routes->add('/','Expense::index');
 	$routes->match(['get','post'],'add','Expense::create');	
 	$routes->match(['get','post'],'edit/(:any)','Expense::edit/$1');
 	$routes->get('delete/(:any)','Expense::delete/$1');
 });
 // supplier
-$routes->group('supplier',function($routes){
+$routes->group('supplier',['filter' => 'auth'],function($routes){
 	$routes->add('/','Supplier::index');
 	$routes->match(['get','post'],'add','Supplier::create');	
 	$routes->match(['get','post'],'edit/(:any)','Supplier::edit/$1');
@@ -97,7 +97,7 @@ $routes->group('supplier',function($routes){
 });
 
 // setting
-$routes->group('setting', function($routes){
+$routes->group('setting',['filter' => 'auth'], function($routes){
 	$routes->add('/','setting::index');
 	$routes->add('backup','setting::backup');
 });
