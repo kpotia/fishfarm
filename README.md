@@ -38,7 +38,7 @@ follow this step to setup the system
 - [ ] Expenses:
 - [ ] Purchase:
 - [ ] Sales:
-  - [ ] order management 
+  - [ ] order management
 - [ ] Setting:
 - [ ] backup:
 
