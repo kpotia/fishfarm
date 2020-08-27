@@ -90,6 +90,13 @@ $routes->group('client', ['filter' => 'auth'],function($routes){
 	$routes->add('delete/(:any)','client::delete/$1');
 });
 // product
+$routes->group('product', ['filter' => 'auth'],function($routes){
+	$routes->add('/','product::index');
+	$routes->add('add','product::create');
+	$routes->add('view/(:any)','product::view/$1');
+	$routes->add('edit/(:any)','product::edit/$1');
+	$routes->add('delete/(:any)','product::delete/$1');
+});
 // sales
 // purchase
 // expenses
@@ -110,7 +117,9 @@ $routes->group('supplier',['filter' => 'auth'],function($routes){
 // setting
 $routes->group('setting',['filter' => 'auth'], function($routes){
 	$routes->add('/','setting::index');
-	$routes->add('backup','setting::backup');
+	$routes->add('backup','backup::index');
+	$routes->add('backup/dl','backup::dl');
+	$routes->add('backup/dl/(:any)','backup::dl/$1');
 });
 
 /**

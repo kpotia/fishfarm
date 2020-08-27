@@ -16,8 +16,7 @@
                 <tr>
                     <th>Product ID</th>
                     <th>Product Name</th>
-                    <th>Product Description</th>
-                    <th>Product Contact</th>
+                    <th>Product Price</th>
                     <th>Options</th>
                 </tr>
             </thead>
@@ -26,8 +25,8 @@
                     <tr>
                         <td> <?=$product['id'] ?></td>
                         <td> <?=$product['name'] ?></td>
-                        <td> <?=$product['description'] ?></td>
-                        <td> <?=$product['contact'] ?></td>
+                        <td> <?=$product['price'] ?></td>
+                        
                         <td>
                             <a href="product/edit/<?=$product['id'] ?>" class="btn">edit</a> 
                             <a href="product/delete/<?=$product['id'] ?>" class="btn">delete</a> 
