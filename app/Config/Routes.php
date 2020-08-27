@@ -76,6 +76,10 @@ $routes->group('vaccination',['filter' => 'auth'], function($routes){
 // staff
 $routes->group('staff', ['filter' => 'auth'],function($routes){
 	$routes->add('/','staff::index');
+	$routes->add('add','staff::create');
+	$routes->add('view/(:any)','staff::view/$1');
+	$routes->add('edit/(:any)','staff::edit/$1');
+	$routes->add('delete/(:any)','staff::delete/$1');
 });
 // client
 // product
