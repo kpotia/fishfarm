@@ -4,15 +4,15 @@
 <div class="row">
     <div class="col-md-6">
         <form action="" method="post">
-        <div class="form-group">
+        
+            <div class="form-group">
                 <label>Staff Firstname</label>
-                <input class="form-control" type="text" value="<?= $staff['firstname'] ?? set_value('firstname')?>"  required name="firstame">
+                <input class="form-control" type="text" value="<?= $staff['firstname'] ?? set_value('firstname')?>"  required name="firstname">
             </div>
             <div class="form-group">
                 <label>Staff Surname</label>
                 <input class="form-control" type="text" value="<?= $staff['surname'] ?? set_value('surname')?>"  required name="surname">
             </div>
-
             <div class="form-group">
                 <label>Staff Email</label>
                 <input class="form-control" type="text" value="<?= $staff['email'] ?? set_value('email')?>"  required name="email">
