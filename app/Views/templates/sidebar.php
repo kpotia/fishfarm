@@ -134,7 +134,7 @@
               
             </ul>
           </li>
-          <li class="nav-item has-treeview">
+          <!-- <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-utensils"></i>
               <p>Food History  </p>
@@ -157,7 +157,7 @@
               </li>
               
             </ul>
-          </li>
+          </li> -->
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-syringe"></i>
@@ -182,7 +182,7 @@
             </ul>
           </li>
 
-          <li class="nav-item has-treeview">
+          <!-- <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-syringe"></i>
               <p>Vaccination History </p>
@@ -205,7 +205,7 @@
               </li>
               
             </ul>
-          </li>
+          </li> -->
 
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -284,7 +284,7 @@
 
          
 
-          <li class="nav-item has-treeview">
+          <!-- <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-money-bill"></i>
               <p>Expense  </p>
@@ -350,9 +350,9 @@
               </li>             
               
             </ul>
-          </li>
+          </li> -->
 
-          <li class="nav-item has-treeview">
+          <!-- <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-receipt"></i>
               <p>Purchase  </p>
@@ -375,14 +375,14 @@
               </li>
               
             </ul>
-          </li>
-          <li class="nav-item">
+          </li> -->
+          <!-- <li class="nav-item">
           <a href="<?= base_url('setting'); ?>" class="nav-link">
             
               <i class="nav-icon fas fa-cog"></i>
               <p>Setting</p>
             </a>            
-          </li>
+          </li> -->
           <li class="nav-item">
           <a href="<?= base_url('logout'); ?>" class="nav-link">
             
