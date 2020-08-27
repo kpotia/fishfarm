@@ -21,22 +21,24 @@ follow this step to setup the system
 - [x] Fish: add,edit,update fish details
 - [x] Fish Tank: add,edit,update fish tank details
 - [x] Food: add, edit, delete food
-- [ ] Food History:
-  - [ ] fh listing
-  - [ ] add food history
-  - [ ] view food history
 - [x] Vaccine:
-- [x] Vaccine History:
+- [x] Supplier:
+- [x] Client:
+- [x] Staff :
+- [ ]  Vaccine History:
   - [ ] VH listing
   - [ ] add VH
   - [ ] view VH
   - [ ] view VH
+
+- [ ] Food History:
+  - [ ] fh listing
+  - [ ] add food history
+  - [ ] view food history
 - [ ] Expenses:
-- [x] Supplier:
 - [ ] Purchase:
 - [ ] Product:
 - [ ] Sales:
-- [ ] Client:
 - [ ] Setting:
 - [ ] backup:
 
