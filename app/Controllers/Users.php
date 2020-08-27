@@ -140,4 +140,9 @@ class Users extends BaseController
             return redirect()->to('/fishfarm_ci/public/');
         }
     }
+
+    public function logout(){
+        session()->destroy();
+        return redirect()->to('/fishfarm_ci/public/');
+    }
 }
