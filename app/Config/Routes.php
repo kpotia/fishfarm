@@ -32,7 +32,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->match(['get','post'],'/', 'Users::index',['filter' => 'noauth']);
 $routes->match(['get','post'],'logout', 'Users::logout');
-$routes->match(['get','post'],'register', 'Users::register',['filter' => 'auth']);
+$routes->match(['get','post'],'register', 'Users::register',['filter' => 'noauth']);
 
 // Fish Routes
 $routes->group('fish',['filter' => 'auth'],function($routes){
