@@ -14,7 +14,6 @@
                     
                     <li> ID: <?=$client['id']?></li>
                     <li> Name: <?=$client['firstname'].' '.$client['surname']?></li>
-                    <li> Role: <?=$client['role']?></li>
                     <li> Contact: <?=$client['contact']?></li>
                     <li> Email: <?=$client['email']?></li>
                     

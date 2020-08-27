@@ -16,7 +16,6 @@
                 <tr>
                     <th>client ID</th>
                     <th>client Name</th>
-                    <th>client Role</th>
                     <th>client email</th>
                     <th>client contact</th>
                     <th>client address</th>
@@ -28,7 +27,6 @@
                 <tr>
                     <td> <?=$client['id'] ?></td>
                     <td> <?=$client['firstname'].' '.$client['surname'] ?></td>
-                    <td> <?=$client['role'] ?></td>
                     <td> <?=$client['email'] ?></td>
                     <td> <?=$client['contact'] ?></td>
                     <td> <?=$client['address'] ?></td>

@@ -27,11 +27,6 @@
                 <label>Client Address</label>
                 <input class="form-control" type="text" value="<?= $client['address'] ?? set_value('address')?>"  required name="address">
             </div>
-
-            <div class="form-group">
-                <label>Client role</label>
-                <input class="form-control" type="text" value="<?= $client['role'] ?? set_value('role')?>"  required name="role">
-            </div>
             
             <?php if(isset($validation)):?>
           <div class="col-12">

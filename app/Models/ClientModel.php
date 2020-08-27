@@ -2,15 +2,15 @@
 
 use CodeIgniter\Model;
 
-class SupplierModel extends Model
+class ClientModel extends Model
 {
-    protected $table      = 'supplier';
+    protected $table      = 'client';
     protected $primaryKey = 'id';
 
     protected $returnType     = 'array';
     protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['name', 'description','contact','email','address'];
+    protected $allowedFields = ['firstname','surname','contact','email','address'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';

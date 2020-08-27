@@ -82,6 +82,13 @@ $routes->group('staff', ['filter' => 'auth'],function($routes){
 	$routes->add('delete/(:any)','staff::delete/$1');
 });
 // client
+$routes->group('client', ['filter' => 'auth'],function($routes){
+	$routes->add('/','client::index');
+	$routes->add('add','client::create');
+	$routes->add('view/(:any)','client::view/$1');
+	$routes->add('edit/(:any)','client::edit/$1');
+	$routes->add('delete/(:any)','client::delete/$1');
+});
 // product
 // sales
 // purchase
