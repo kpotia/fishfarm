@@ -6,31 +6,31 @@
         <form action="" method="post">
         <div class="form-group">
                 <label>Staff Firstname</label>
-                <input class="form-control" type="text" value="<?= $fish['firstname'] ?? set_value('firstname')?>"  required name="firstame">
+                <input class="form-control" type="text" value="<?= $staff['firstname'] ?? set_value('firstname')?>"  required name="firstame">
             </div>
             <div class="form-group">
                 <label>Staff Surname</label>
-                <input class="form-control" type="text" value="<?= $fish['surname'] ?? set_value('surname')?>"  required name="surname">
+                <input class="form-control" type="text" value="<?= $staff['surname'] ?? set_value('surname')?>"  required name="surname">
             </div>
 
             <div class="form-group">
                 <label>Staff Email</label>
-                <input class="form-control" type="text" value="<?= $fish['email'] ?? set_value('email')?>"  required name="email">
+                <input class="form-control" type="text" value="<?= $staff['email'] ?? set_value('email')?>"  required name="email">
             </div>
 
             <div class="form-group">
                 <label>Staff Contact</label>
-                <input class="form-control" type="text" value="<?= $fish['contact'] ?? set_value('contact')?>"  required name="contact">
+                <input class="form-control" type="text" value="<?= $staff['contact'] ?? set_value('contact')?>"  required name="contact">
             </div>
 
             <div class="form-group">
                 <label>Staff Address</label>
-                <input class="form-control" type="text" value="<?= $fish['address'] ?? set_value('address')?>"  required name="address">
+                <input class="form-control" type="text" value="<?= $staff['address'] ?? set_value('address')?>"  required name="address">
             </div>
 
             <div class="form-group">
                 <label>Staff role</label>
-                <input class="form-control" type="text" value="<?= $fish['role'] ?? set_value('role')?>"  required name="role">
+                <input class="form-control" type="text" value="<?= $staff['role'] ?? set_value('role')?>"  required name="role">
             </div>
             
             <?php if(isset($validation)):?>
