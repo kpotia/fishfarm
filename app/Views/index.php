@@ -73,7 +73,7 @@
             <!-- small card -->
             <div class="small-box bg-danger">
                 <div class="inner">
-                <h3>3500 XOF</h3>
+                <h3>3500 NGN</h3>
 
                 <p>Expenses</p>
                 </div>
@@ -89,7 +89,7 @@
             <!-- small card -->
             <div class="small-box bg-success">
                 <div class="inner">
-                <h3>14000 XOF</h3>
+                <h3>14000 NGN</h3>
 
                 <p>Sales</p>
                 </div>
@@ -105,7 +105,7 @@
             <!-- small card -->
             <div class="small-box bg-warning">
                 <div class="inner">
-                <h3>4000 XOF</h3>
+                <h3>4000 NGN</h3>
 
                 <p>Purchase</p>
                 </div>

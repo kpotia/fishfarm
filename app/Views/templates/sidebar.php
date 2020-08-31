@@ -259,7 +259,7 @@
           </li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-money-bill-wave"></i>
+              <i class="nav-icon fas fa-user"></i>
               <p>Client  </p>
             </a>
             <ul class="nav nav-treeview">
@@ -376,13 +376,13 @@
               
             </ul>
           </li> -->
-          <!-- <li class="nav-item">
+          <li class="nav-item">
           <a href="<?= base_url('setting'); ?>" class="nav-link">
             
               <i class="nav-icon fas fa-cog"></i>
               <p>Setting</p>
             </a>            
-          </li> -->
+          </li>
           <li class="nav-item">
           <a href="<?= base_url('logout'); ?>" class="nav-link">
             

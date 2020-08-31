@@ -21,4 +21,11 @@ class FishtankModel extends Model
     protected $validationRules    = [];
     protected $validationMessages = [];
     protected $skipValidation     = false;
+
+    public function getFishTankDetails(int $var = null)
+    {
+        if ($var == null){
+            return $this->findAll();
+        }
+    }
 }

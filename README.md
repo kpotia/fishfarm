@@ -40,6 +40,12 @@ follow this step to setup the system
 - [ ] Sales:
   - [ ] order management
 - [ ] Setting:
+- [ ] Report
+  - [ ] Fish
+  - [ ] Sales
+  - [ ] Purchase
+  - [ ] Expense
+  - [ ] financial
 - [ ] backup:
 
 ## Server Requirements
