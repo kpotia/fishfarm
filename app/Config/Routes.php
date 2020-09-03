@@ -33,6 +33,8 @@ $routes->setAutoRoute(true);
 $routes->match(['get','post'],'/', 'Users::index',['filter' => 'noauth']);
 $routes->match(['get','post'],'logout', 'Users::logout');
 $routes->match(['get','post'],'register', 'Users::register',['filter' => 'noauth']);
+$routes->match(['get','post'],'test', 'Test::index');
+
 
 // Fish Routes
 $routes->group('fish',['filter' => 'auth'],function($routes){
