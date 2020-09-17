@@ -1,7 +1,7 @@
 <body class="login-page" style="min-height: 512.8px;">
 <div class="login-box">
   <div class="login-logo">
-    <a href="#"><b>Fish</b>FARM</a>
+    <a href="#"><b>Fish</b>FARM Sales department</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
@@ -48,7 +48,7 @@
 
       
       <p class="mb-0">
-        <a href="/fishfarm_ci/public/salesdpt" class="text-center">Login as Sales Person</a>
+        <a href="/fishfarm_ci/public/login" class="text-center">Login as admin</a>
       </p>
     </div>
     <!-- /.login-card-body -->

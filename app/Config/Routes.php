@@ -47,7 +47,6 @@ $routes->group('fish',['filter' => 'auth'],function($routes){
 		$routes->add('/','FishTank::index');
 		$routes->match(['get','post'],'add','FishTank::create');
 		$routes->get('delete/(:any)','FishTank::delete/$1');
-
 	});
 });
 
@@ -120,6 +119,11 @@ $routes->group('supplier',['filter' => 'auth'],function($routes){
 	$routes->match(['get','post'],'add','Supplier::create');	
 	$routes->match(['get','post'],'edit/(:any)','Supplier::edit/$1');
 	$routes->get('delete/(:any)','Supplier::delete/$1');
+});
+
+// Salesdpt
+$routes->group('salesdpt', function ($routes){
+	$routes->match(['get','post'],'/','salesdept/Users::index');
 });
 
 // setting
