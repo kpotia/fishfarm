@@ -4,11 +4,12 @@ use CodeIgniter\Model;
 
 class FishtankModel extends Model
 {
+
     protected $table      = 'fish_tank';
     protected $primaryKey = 'tk_id';
 
     protected $returnType     = 'array';
-    protected $useSoftDeletes = true;
+    protected $useSoftDeletes = false;
 
     protected $allowedFields = ['fish_id', 'qty','birthdate'];
 
@@ -22,10 +23,11 @@ class FishtankModel extends Model
     protected $validationMessages = [];
     protected $skipValidation     = false;
 
-    public function getFishTankDetails(int $var = null)
+    public function getFT(int $var = null)
     {
-        if ($var == null){
-            return $this->findAll();
-        }
+
+        $query = $this->db->query('SELECT fish_tank.tk_id as ft_id,fish_tank.qty as qty,fish_tank.birthdate as birthdate,fish.name as fishname FROM fish INNER JOIN fish_tank on fish_tank.fish_id = fish.id');
+
+        return $fishtank= $query->getResult('array');
     }
 }

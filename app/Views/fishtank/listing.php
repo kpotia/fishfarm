@@ -30,7 +30,7 @@
                         <td> <?=$ft['qty'] ?></td>
                         <td> <?=$ft['birthdate'] ?></td>
                         <td>
-                            <a href="<?= base_url('fish/tank/delete/'.$ft['ft_id']) ?>" class="btn">delete</a> 
+                            <a href="<?= base_url('fish/tank/delete/'.$ft['ft_id']) ?>" class="btn btn-danger">delete</a> 
                         </td>
                     </tr>
                 <?php endforeach; ?>

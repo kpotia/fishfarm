@@ -28,8 +28,8 @@
                         <td> <?=$product['price'] ?></td>
                         
                         <td>
-                            <a href="product/edit/<?=$product['id'] ?>" class="btn">edit</a> 
-                            <a href="product/delete/<?=$product['id'] ?>" class="btn">delete</a> 
+                            <a href="product/edit/<?=$product['id'] ?>" class="btn btn-warning">edit</a> 
+                            <a href="product/delete/<?=$product['id'] ?>" class="btn btn-danger">delete</a> 
                         </td>
                     </tr>
                 <?php endforeach; ?>

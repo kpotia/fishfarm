@@ -3,21 +3,21 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\FoodModel;
+use App\Models\FishtankModel;
 use App\Models\FoodhistoryModel;
 
 
 
 class FoodHistory extends Controller
 {
-    // public $FoodhistoryModel = new FoodhistoryModel;
 
     public function index()
 	{
         $model = new FoodhistoryModel();
 
-        $fhs = $model->fetchAll();
+        $fhs = $model->getFH();
         $session = session();
-
+// return var_dump($fhs);
 
         $data = [
             'title' => 'Fish Listing',
@@ -26,27 +26,31 @@ class FoodHistory extends Controller
         ];
 
         
-        return view('fishtank/listing',$data);
+        return view('foodhistory/listing',$data);
     }
 
     public function create()
     {
         $session = session();
         $fm = new FoodModel();
+        $ftm = new FishtankModel();
 
-        $fd = $fm->findAll();
+        $fds = $fm->findAll();
+        $fts = $ftm->getFT();
         helper('form');
         $data = [
-            'title' => 'Add Fish Tank',
+            'title' => 'Add Food History',
             'session' => $session,
-            'foods' => $fd
+            'fds' => $fds,
+            'fts' => $fts
         ];
         // load form 
         if($this->request->getMethod() == 'post'){
 
             // validate data
             $rules = [
-                'fish_id' => 'required',
+                'fishtank' => 'required',
+                'food' => 'required',
                 'qty' => 'required',
                 'date' => 'required',
             ];
@@ -55,20 +59,23 @@ class FoodHistory extends Controller
                 $data['validation'] = $this->validator;
             }else{
                 $model = new FoodhistoryModel();
+                $ftm = new FishtankModel();
+                $ftd = $ftm->find($this->request->getVar('fishtank'));
                 $newData = [
-                    'fish_id' => $this->request->getVar('fish_id'),
+                    'tank_id' => $ftd['tk_id'],
+                    'fish_id' => $ftd['fish_id'],
+                    'food_id' => $this->request->getVar('food'),
                     'qty' => $this->request->getVar('qty'),                    
-                    'birthdate' => $this->request->getVar('date'),                    
+                    'date' => $this->request->getVar('date'),                    
                 ];
                 $model->save($newData);
                 $session = session();
-                $session->setFlashData('success','Fish Added successfully');
+                $session->setFlashData('success','food history Added successfully');
                 return redirect()->to('/fishfarm_ci/public/food/history');
             }
-
         }
-        
-        return view('fishtank/form', $data);
+        // return var_dump($data);
+        return view('foodhistory/form', $data);
 
     }
 

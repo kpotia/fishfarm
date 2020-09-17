@@ -26,21 +26,21 @@ follow this step to setup the system
 - [x] Client:
 - [x] Staff :
 - [x] Product:
-- [ ] Vaccine History:
-  - [ ] VH listing
-  - [ ] add VH
-  - [ ] view VH
-  - [ ] view VH
-- [ ] Food History:
-  - [ ] fh listing
-  - [ ] add food history
-  - [ ] view food history
-- [ ] Expenses:
-- [ ] Purchase:
+- [x] Vaccine History:
+  - [x] VH listing
+  - [x] add VH
+  - [x] view VH
+  - [x] view VH
+- [x] Food History:
+  - [x] fh listing
+  - [x] add food history
+  - [x] view food history
+- [x] Expenses:
+- [x] Purchase:
 - [ ] Sales
   - [ ] order management
 - [ ] Setting:
-- [ ] Report
+- [ ] Report:
   - [ ] Fish
   - [ ] Sales
   - [ ] Purchase

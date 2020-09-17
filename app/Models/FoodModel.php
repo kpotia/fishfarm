@@ -8,7 +8,7 @@ class FoodModel extends Model
     protected $primaryKey = 'fd_id';
 
     protected $returnType     = 'array';
-    protected $useSoftDeletes = true;
+    protected $useSoftDeletes = false;
 
     protected $allowedFields = ['name', 'qty'];
 

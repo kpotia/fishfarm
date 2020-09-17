@@ -15,22 +15,15 @@ class FishTank extends Controller
 	{
         $model = new FishtankModel();
 
-        // $fishtank = $model->query('');
         $session = session();
-        $db = db_connect();
-        // $model = new UserModel();
 
-        $query = $db->query('SELECT fish_tank.tk_id as ft_id,fish_tank.qty as qty,fish_tank.birthdate as birthdate,fish.name as fishname FROM fish INNER JOIN fish_tank on fish_tank.fish_id = fish.id');
-
-        $fishtank= $query->getResult('array');
 
         $data = [
             'title' => 'Fish Listing',
-            'fishtank' => $fishtank,
+            'fishtank' => $model->getFT(),
             'session' => $session
         ];
-
-        
+       
         return view('fishtank/listing',$data);
     }
 

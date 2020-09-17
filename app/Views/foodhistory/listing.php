@@ -1,8 +1,6 @@
 <?= $this->extend('templates/dashboard') ?>
-
 <?= $this->section('content') ?>
     <div class="row">
-
     <div class="col-10 bg-white">
     <?php if(session()->get('success')): ?>
   <div class="alert alert-success" role="alert">
@@ -12,11 +10,11 @@
     <?= session()->get('fail') ?>
 
       <?php endif;?>
-    <table class='table table-responsive table-hover '>
+    <table class='table table-responsive '>
             <thead>
                 <tr>
                     <th>Tank </th>
-                    <!-- <th>Tank </th> -->
+                    <th>Fish </th>
                     <th>Food Name</th>
                     <th>food Qty(g)</th>
                     <th>date</th>
@@ -24,13 +22,16 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($Food as $fd): ?>
+                <?php foreach($fhs as $fh): ?>
                     <tr>
-                        <td> <?= 'tank id fishname' ?></td>
-                        <td> <?=$fd['name'] ?></td>
-                        <td> <?=$fd['qty'] ?></td>
+                        <td> <?= $fh['tank_id'] ?></td>
+                        <td> <?= $fh['fishname'] ?></td>
+                        <td> <?= $fh['foodname'] ?></td>
+                        <td> <?= $fh['qty'] ?></td>
+                        <td> <?= $fh['date'] ?></td>
                         <td>
-                            <a href="<?= base_url('food/delete/'. 'tank id fishname') ?>" class="btn">delete</a> 
+                            <a href="<?= base_url('food/history/delete/'.$fh['fh_id']) ?>" class="btn btn-danger">delete</a> 
+                            <a href="<?= base_url('food/history/update/'.$fh['fh_id']) ?>" class="btn btn-warning">edit</a> 
                         </td>
                     </tr>
                 <?php endforeach; ?>

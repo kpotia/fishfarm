@@ -15,20 +15,25 @@
     <table class='table table-responsive table-hover '>
             <thead>
                 <tr>
-                    <th>Food ID</th>
-                    <th>Food Name</th>
-                    <th>Fish Qty</th>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Note</th>
+                    <th>Amount</th>
+                    <th>Status</th>
                     <th>Options</th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($Food as $fd): ?>
+                <?php foreach($exps as $exp): ?>
                     <tr>
-                        <td> <?=$fd['fd_id'] ?></td>
-                        <td> <?=$fd['name'] ?></td>
-                        <td> <?=$fd['qty'] ?></td>
+                        <td> <?=$exp['exp_date'] ?></td>
+                        <td> <?=$exp['type'] ?></td>
+                        <td> <?=$exp['note'] ?></td>
+                        <td> <?=$exp['amount'] ?></td>
+                        <td> <?=$exp['status'] ?></td>
                         <td>
-                            <a href="<?= base_url('food/delete/'.$fd['fd_id']) ?>" class="btn">delete</a> 
+                            <a href="<?= base_url('expense/delete/'.$exp['expid']) ?>" class="btn btn-danger">delete</a> 
+                            <a href="<?= base_url('expense/edit/'.$exp['expid']) ?>" class="btn btn-warning">edit</a> 
                         </td>
                     </tr>
                 <?php endforeach; ?>

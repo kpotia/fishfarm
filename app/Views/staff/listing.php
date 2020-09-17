@@ -33,8 +33,8 @@
                     <td> <?=$staff['contact'] ?></td>
                     <td> <?=$staff['address'] ?></td>
                     <td>
-                        <a href="staff/edit/<?=$staff['id'] ?>" class="btn">edit</a>
-                        <a href="staff/delete/<?=$staff['id'] ?>" class="btn">delete</a>
+                        <a href="staff/edit/<?=$staff['id'] ?>" class="btn btn-warning">edit</a>
+                        <a href="staff/delete/<?=$staff['id'] ?>" class="btn btn-danger">delete</a>
                     </td>
                 </tr>
                 <?php endforeach; ?>

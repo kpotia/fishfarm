@@ -3,7 +3,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="<?= base_url() ?>" class="brand-link">
       <!-- <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-list elevation-3" style="opacity: .8"> -->
       <span class="brand-text font-weight-light">FishFARM</span>
     </a>
@@ -132,14 +132,7 @@
                 </a>
               </li>
               
-            </ul>
-          </li>
-          <!-- <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-utensils"></i>
-              <p>Food History  </p>
-            </a>
-            <ul class="nav nav-treeview">
+            
               <li class="nav-item">
                 <a href="<?= base_url('food/history');?>" class="nav-link">
                   
@@ -157,7 +150,7 @@
               </li>
               
             </ul>
-          </li> -->
+          </li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-syringe"></i>
@@ -165,7 +158,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= base_url('vaccination') ?>" class="nav-link">
+                <a href="<?= base_url('vaccine') ?>" class="nav-link">
                   <i class="fas fa-list nav-icon"></i>
                   <p>
                     Vaccination listing
@@ -173,23 +166,17 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?=base_url('vaccination/add')?>" class="nav-link">
+                <a href="<?=base_url('vaccine/add')?>" class="nav-link">
                   <i class="fas fa-plus nav-icon"></i>
                   <p>Add Vaccination</p>
                 </a>
               </li>
               
             </ul>
-          </li>
-
-          <!-- <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-syringe"></i>
-              <p>Vaccination History </p>
-            </a>
+          
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= base_url('vaccination/history')?>" class="nav-link">
+                <a href="<?= base_url('vaccine/history')?>" class="nav-link">
                   
                   <i class="fas fa-list nav-icon"></i>
                   <p>
@@ -198,14 +185,14 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('vaccination/history/add');?>" class="nav-link">
+                <a href="<?= base_url('vaccine/history/add');?>" class="nav-link">
                   <i class="fas fa-plus nav-icon"></i>
                   <p>Add Vaccination history</p>
                 </a>
               </li>
               
             </ul>
-          </li> -->
+          </li>
 
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -284,7 +271,7 @@
 
          
 
-          <!-- <li class="nav-item has-treeview">
+          <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-money-bill"></i>
               <p>Expense  </p>
@@ -350,9 +337,9 @@
               </li>             
               
             </ul>
-          </li> -->
+          </li>
 
-          <!-- <li class="nav-item has-treeview">
+          <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-receipt"></i>
               <p>Purchase  </p>
@@ -369,13 +356,13 @@
               </li>
               <li class="nav-item">
               <a href="<?= base_url('purchase/add') ?>" class="nav-link">
-<i class="fas fa-list nav-icon"></i>
+              <i class="fas fa-list nav-icon"></i>
                   <p>Add Purchase</p>
                 </a>
               </li>
               
             </ul>
-          </li> -->
+          </li>
           <li class="nav-item">
           <a href="<?= base_url('setting'); ?>" class="nav-link">
             

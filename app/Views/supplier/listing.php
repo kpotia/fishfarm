@@ -30,8 +30,8 @@
                         <td> <?=$supplier['description'] ?></td>
                         <td> <?=$supplier['contact'] ?></td>
                         <td>
-                            <a href="supplier/edit/<?=$supplier['id'] ?>" class="btn">edit</a> 
-                            <a href="supplier/delete/<?=$supplier['id'] ?>" class="btn">delete</a> 
+                            <a href="supplier/edit/<?=$supplier['id'] ?>" class="btn btn-warning">edit</a> 
+                            <a href="supplier/delete/<?=$supplier['id'] ?>" class="btn btn-danger">delete</a> 
                         </td>
                     </tr>
                 <?php endforeach; ?>

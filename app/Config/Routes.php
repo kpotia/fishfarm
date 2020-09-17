@@ -57,20 +57,20 @@ $routes->group('food',['filter' => 'auth'], function($routes){
 	$routes->add('/','food::index');
 	$routes->match(['get','post'],'add','food::create');
 	$routes->group('history', function($routes){
-		$routes->add('/','FoodHistory::index');
-		$routes->match(['get','post'],'add','FoodHistory::create');
+		$routes->add('/','foodhistory::index');
+		$routes->match(['get','post'],'add','foodhistory::create');
 
 	});
 });
 
 // Vaccin Rootes
-$routes->group('vaccination',['filter' => 'auth'], function($routes){
-	$routes->add('/','food::index');
-	$routes->match(['get','post'],'add','food::add');
+$routes->group('vaccine',['filter' => 'auth'], function($routes){
+	$routes->add('/','vaccine::index');
+	$routes->match(['get','post'],'add','vaccine::create');
 
 	$routes->group('history', function($routes){
-		$routes->add('/','foodhistory::index');
-		$routes->match(['get','post'],'add','foodhistory::create');
+		$routes->add('/','vaccinehistory::index');
+		$routes->match(['get','post'],'add','vaccinehistory::create');
 
 	});
 });
@@ -101,6 +101,12 @@ $routes->group('product', ['filter' => 'auth'],function($routes){
 });
 // sales
 // purchase
+$routes->group('purchase',['filter' => 'auth'],function($routes){
+	$routes->add('/','Purchase::index');
+	$routes->match(['get','post'],'add','Purchase::create');	
+	$routes->match(['get','post'],'edit/(:any)','Purchase::edit/$1');
+	$routes->get('delete/(:any)','Purchase::delete/$1');
+});
 // expenses
 $routes->group('expense',['filter' => 'auth'],function($routes){
 	$routes->add('/','Expense::index');

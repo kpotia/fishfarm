@@ -28,7 +28,7 @@
                         <td> <?=$fd['name'] ?></td>
                         <td> <?=$fd['qty'] ?></td>
                         <td>
-                            <a href="<?= base_url('food/delete/'.$fd['fd_id']) ?>" class="btn">delete</a> 
+                            <a href="<?= base_url('food/delete/'.$fd['fd_id']) ?>" class="btn btn-danger">delete</a> 
                         </td>
                     </tr>
                 <?php endforeach; ?>

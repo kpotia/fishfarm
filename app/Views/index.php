@@ -23,7 +23,7 @@
             <!-- small card -->
             <div class="small-box bg-primary">
                 <div class="inner">
-                <h3>700</h3>
+                <h3>70</h3>
 
                 <p>Product</p>
                 </div>

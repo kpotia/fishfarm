@@ -8,9 +8,9 @@ class FoodhistoryModel extends Model
     protected $primaryKey = 'fh_id';
 
     protected $returnType     = 'array';
-    protected $useSoftDeletes = true;
+    protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['food_id','food_id','tank_id', 'qty','date'];
+    protected $allowedFields = ['food_id','fish_id','tank_id', 'qty','date'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';
@@ -22,11 +22,30 @@ class FoodhistoryModel extends Model
     protected $validationMessages = [];
     protected $skipValidation     = false;
 
-    public function fetchAll(){
-        $db      = \Config\Database::connect();
-        $builder=$db->table('food_history');
-        $builder->select('*');
-        $builder->join('food', 'food.fd_id = food_history.food_id');
-        return $builder->get();
+    public function getFH(){
+     
+        $q = "SELECT
+        food_history.fh_id,
+        food_history.tank_id,
+        food.name as foodname,
+        fish.name as fishname,
+        food_history.qty,
+        food_history.date
+    FROM
+        food_history,fish_tank,food,fish
+    WHERE
+        food_history.tank_id = fish_tank.tk_id
+    AND
+        food_history.food_id = food.fd_id
+    AND
+        food_history.fish_id = fish.id";
+
+
+// $q = 'SELECT * FROM food_history, fish_tank WHERE
+    // food_history.tank_id = fish_tank.tk_id';
+        
+        $query = $this->db->query($q);
+
+       return $fishtank = $query->getResult('array');
     }
 }

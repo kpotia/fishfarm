@@ -8,14 +8,14 @@ class Expense extends Controller
 	public function index()
     {
     //    initialise data array
-        $ExpenseM = new ExpenseModel();
-        $Expenses = $ExpenseM->findAll();
+        $expenseM = new ExpenseModel();
+        $expenses = $expenseM->findAll();
         $session = session();
 
         $data = [
             'title' => 'Expenses',
             'session' => $session,
-            'Expenses' => $Expenses,
+            'exps' => $expenses,
         ];
         return view('Expense/listing',$data);
     }
@@ -31,11 +31,11 @@ class Expense extends Controller
 
         if($this->request->getMethod() == 'post'){
             $rules = [
-                'name' => 'required|min_length[3]|max_length[30]',
-                'description' => 'required|min_length[3]|max_length[200]', 
-                'contact' => 'required|min_length[3]|max_length[200]', 
-                'email' => 'required|min_length[3]|max_length[200]', 
-                'address' => 'required|min_length[3]|max_length[200]', 
+                'exptype' => 'required',
+                'expnote' => 'required|min_length[3]|max_length[200]', 
+                'expamount' => 'required', 
+                'expstatus' => 'required', 
+                'expdate' => 'required', 
             ];
     
             if (! $this->validate($rules)) {
@@ -43,11 +43,11 @@ class Expense extends Controller
             }else{
                 $model = new ExpenseModel();
                 $newData = [
-                    'name' => $this->request->getVar('name'),
-                    'description' => $this->request->getVar('description'),                    
-                    'contact' => $this->request->getVar('contact'),                    
-                    'email' => $this->request->getVar('email'),                    
-                    'address' => $this->request->getVar('address'),                    
+                    'exp_date' => $this->request->getVar('expdate'),
+                    'note' => $this->request->getVar('expnote'),                    
+                    'type' => $this->request->getVar('exptype'),                    
+                    'amount' => $this->request->getVar('expamount'),                    
+                    'status' => $this->request->getVar('expstatus'),
                 ];
                 $model->save($newData);$session = session();
                 $session->setFlashData('success','Expense Added successfully');
@@ -99,7 +99,7 @@ class Expense extends Controller
         else{
             $session->setFlashData('fail','deletion failed');
         }
-        return redirect()->to('/fishfarm_ci/public/Expense');
+        return redirect()->to('/fishfarm_ci/public/expense/');
     }
 
 

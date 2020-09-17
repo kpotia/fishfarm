@@ -4,13 +4,13 @@ use CodeIgniter\Model;
 
 class ExpenseModel extends Model
 {
-    protected $table      = 'expense';
-    protected $primaryKey = 'id';
+    protected $table      = 'expenses';
+    protected $primaryKey = 'expid';
 
     protected $returnType     = 'array';
-    protected $useSoftDeletes = true;
+    protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['type','description', 'date','price','supplier'];
+    protected $allowedFields = ['type','amount', 'exp_date','notes','status'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';

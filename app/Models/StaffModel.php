@@ -8,7 +8,7 @@ class StaffModel extends Model
     protected $primaryKey = 'id';
 
     protected $returnType     = 'array';
-    protected $useSoftDeletes = true;
+    protected $useSoftDeletes = false;
 
     protected $allowedFields = ['firstname','surname', 'role','contact','email','address'];
 
