@@ -3,7 +3,7 @@
 use Config\Validation;
 use App\Models\SalesUserModel;
 
-class Users extends BaseController
+class SalesUsers extends BaseController
 {
 	public function index()
 	{

@@ -48,7 +48,7 @@
 
       
       <p class="mb-0">
-        <a href="/fishfarm_ci/public/login" class="text-center">Login as admin</a>
+        <a href="/fishfarm_ci/public/" class="text-center">Login as admin</a>
       </p>
     </div>
     <!-- /.login-card-body -->

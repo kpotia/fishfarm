@@ -123,7 +123,7 @@ $routes->group('supplier',['filter' => 'auth'],function($routes){
 
 // Salesdpt
 $routes->group('salesdpt', function ($routes){
-	$routes->match(['get','post'],'/','salesdept/Users::index');
+	$routes->match(['get','post'],'/','SalesUsers::index');
 });
 
 // setting
