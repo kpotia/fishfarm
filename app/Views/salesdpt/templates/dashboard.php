@@ -9,7 +9,7 @@
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <?= $this->include('templates/sidebar') ?>
+  <?= $this->include('salesdpt/templates/sidebar') ?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->

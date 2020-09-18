@@ -33,7 +33,7 @@ $routes->setAutoRoute(true);
 $routes->match(['get','post'],'/', 'Users::index',['filter' => 'noauth']);
 $routes->match(['get','post'],'logout', 'Users::logout');
 $routes->match(['get','post'],'register', 'Users::register',['filter' => 'noauth']);
-$routes->match(['get','post'],'test', 'Test::index');
+// $routes->match(['get','post'],'test', 'Test::index');
 
 
 // Fish Routes
@@ -124,7 +124,11 @@ $routes->group('supplier',['filter' => 'auth'],function($routes){
 // Salesdpt
 $routes->group('salesdpt', function ($routes){
 	$routes->match(['get','post'],'/','SalesUsers::index');
+	$routes->add('dashboard','SalesUsers::dashboard');
 });
+
+// register sales dpt 
+$routes->match(['get','post'],'registersalesperson','SalesUsers::register',['filter'=>'auth']);
 
 // setting
 $routes->group('setting',['filter' => 'auth'], function($routes){

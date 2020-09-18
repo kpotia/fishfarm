@@ -3,7 +3,7 @@
 use CodeIgniter\Model;
 
 class SalesUserModel extends Model{
-    protected $table = 'saleusers';
+    protected $table = 'salesusers';
     protected $allowedFields = ['firstname','lastname','email','password','updated_at'];
     protected $beforeInsert = ['beforeInsert'];
     protected $beforeUpdate = ['beforeUpdate'];
