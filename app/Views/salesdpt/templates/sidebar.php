@@ -77,33 +77,7 @@
               <a href="<?=base_url('salesdpt/orders/add');?>" class="nav-link">
                 
                   <i class="fas fa-list nav-icon"></i>
-                  <p>Add Order</p>
-                </a>
-              </li>
-              
-            </ul>
-          </li>
-
-
-<li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
-              <p>Product  </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-              <a href="<?=base_url('Product');?>" class="nav-link">
-                  <i class="fas fa-list nav-icon"></i>
-                  <p>
-                    Product listing
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item">
-              <a href="<?=base_url('Product/add');?>" class="nav-link">
-                
-                  <i class="fas fa-list nav-icon"></i>
-                  <p>Add Product</p>
+                  <p>POS</p>
                 </a>
               </li>
               
