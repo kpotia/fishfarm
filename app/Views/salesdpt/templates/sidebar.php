@@ -24,7 +24,7 @@
                with font-awesome or any other icon font library -->
           
           <li class="nav-item">
-            <a href="<?= base_url('dashboard');?>" class="nav-link">
+            <a href="<?= base_url('salesdpt/dashboard');?>" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Dashboard
