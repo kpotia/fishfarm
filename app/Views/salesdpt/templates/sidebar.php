@@ -34,28 +34,10 @@
           
          
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="<?= base_url('salesdpt/pos');?>" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
-              <p>Orders  </p>
+              <p>POS  </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-              <a href="<?=base_url('salesdpt/orders');?>" class="nav-link">
-                  <i class="fas fa-list nav-icon"></i>
-                  <p>
-                    Order listing
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item">
-              <a href="<?=base_url('salesdpt/orders/add');?>" class="nav-link">
-                
-                  <i class="fas fa-list nav-icon"></i>
-                  <p>POS</p>
-                </a>
-              </li>
-              
-            </ul>
           </li>
           
 
