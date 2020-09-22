@@ -126,6 +126,7 @@ $routes->group('salesdpt', function ($routes){
 	$routes->match(['get','post'],'/','SalesUsers::index');
 	$routes->add('dashboard','SalesUsers::dashboard');
 	$routes->match(['get','post'],'pos','Pos::index');
+	$routes->match(['get','post'],'viewcart','Pos::viewcart');
 });
 
 // register sales dpt 
