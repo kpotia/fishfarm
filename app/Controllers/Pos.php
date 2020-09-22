@@ -35,25 +35,31 @@ class Pos extends Controller
     }
 
     public function viewcart(){
+
         
         // load cart 
-        $cart = (issset(session('cart'))) ? session('cart') :array(); ;
+        $cart = (session('cart')!== null) ? session('cart') :array(); ;
 
         // if cart empty 
         if (is_array($cart) &&  empty($cart)) {
-            echo 'cart is empty';
+           session()->setFlashdata('cartmsg', 'cart is empty');
+           echo '';
         }else {
-            
-        }
-        $session = session();
 
-        var_dump();
+        }
+
+        $data = [
+                    'title' => 'POS: View Cart',
+                    'cart' => $cart,
+
+                ];
+        return view('salesdpt/cart', $data);
     }
 
     public function addtocart(){
         helper('form');
         // get form data 
-        $cartitem = ''
+        $cartitem = '';
 
         // validate and create an array from data 
 
