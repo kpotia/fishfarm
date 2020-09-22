@@ -98,7 +98,7 @@ $routes->group('product', ['filter' => 'auth'],function($routes){
 	$routes->add('edit/(:any)','product::edit/$1');
 	$routes->add('delete/(:any)','product::delete/$1');
 });
-// sales
+
 // purchase
 $routes->group('purchase',['filter' => 'auth'],function($routes){
 	$routes->add('/','Purchase::index');
@@ -125,6 +125,7 @@ $routes->group('supplier',['filter' => 'auth'],function($routes){
 $routes->group('salesdpt', function ($routes){
 	$routes->match(['get','post'],'/','SalesUsers::index');
 	$routes->add('dashboard','SalesUsers::dashboard');
+	$routes->match(['get','post'],'pos','Pos::index');
 });
 
 // register sales dpt 
