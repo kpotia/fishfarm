@@ -35,7 +35,7 @@ class SalesUsers extends BaseController
             $this->setUserSession($user);
             return redirect()->to(base_url('/salesdpt/dashboard'));
 
-                            }
+            }
         }
         }
 
