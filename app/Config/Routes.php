@@ -82,13 +82,13 @@ $routes->group('staff', ['filter' => 'auth'],function($routes){
 	$routes->add('edit/(:any)','staff::edit/$1');
 	$routes->add('delete/(:any)','staff::delete/$1');
 });
-// client
-$routes->group('client', ['filter' => 'auth'],function($routes){
-	$routes->add('/','client::index');
-	$routes->add('add','client::create');
-	$routes->add('view/(:any)','client::view/$1');
-	$routes->add('edit/(:any)','client::edit/$1');
-	$routes->add('delete/(:any)','client::delete/$1');
+// salesperson
+$routes->group('salesperson', ['filter' => 'auth'],function($routes){
+	$routes->add('/','SalesUsers::index');
+	$routes->add('add','SalesUsers::create');
+	$routes->add('view/(:any)','SalesUsers::view/$1');
+	$routes->add('edit/(:any)','SalesUsers::edit/$1');
+	$routes->add('delete/(:any)','SalesUsers::delete/$1');
 });
 // product
 $routes->group('product', ['filter' => 'auth'],function($routes){
