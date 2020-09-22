@@ -7,7 +7,10 @@ use App\Models\OrderModel;
 class Pos extends Controller
 {
     // load cart library
-    $this->load->library('cart');
+    // $this->load->library('cart');
+
+    public $cart  = array();
+
 
 	public function index()
     {
@@ -24,8 +27,38 @@ class Pos extends Controller
         return view('salesdpt/productlisting.php',$data);
     }
 
-    public function viewcart(){
-        var_dump($this->cart);
+    // innitialise cart in a session
+    public function initcart(){
+        $cart = array();
+
+        session()->set($cart);
     }
+
+    public function viewcart(){
+        
+        // load cart 
+        $cart = (issset(session('cart'))) ? session('cart') :array(); ;
+
+        // if cart empty 
+        if (is_array($cart) &&  empty($cart)) {
+            echo 'cart is empty';
+        }else {
+            
+        }
+        $session = session();
+
+        var_dump();
+    }
+
+    public function addtocart(){
+        helper('form');
+        // get form data 
+        $cartitem = ''
+
+        // validate and create an array from data 
+
+        // add to cart array
+    }
+
 
 }
