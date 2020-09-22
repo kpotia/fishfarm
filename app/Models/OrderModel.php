@@ -4,13 +4,13 @@ use CodeIgniter\Model;
 
 class ClientModel extends Model
 {
-    protected $table      = 'client';
+    protected $table      = 'orders';
     protected $primaryKey = 'id';
 
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['firstname','surname','contact','email','address'];
+    protected $allowedFields = ['orderdate','status','client','paid','total'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';
