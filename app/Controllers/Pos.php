@@ -16,9 +16,9 @@ class Pos extends Controller
         $data = [
             'title' => 'POS',
             'session' => $session,
-            'Products' => $Products,
+            'products' => $Products,
         ];
-        return view('client/listing',$data);
+        return view('salesdpt/productlisting.php',$data);
     }
 
 }
