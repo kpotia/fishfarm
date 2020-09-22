@@ -10,13 +10,18 @@
     <?= session()->get('success') ?>
   </div>
     <?php elseif(session()->get('fail')): ?>
+  <div class="alert alert-danger" role="alert">
     <?= session()->get('fail') ?>
+</div>
     <?php else: ?>
-    <?php var_dump(session()->getFlashdata()); ?>
+  <div class="alert alert-info" role="alert">
+
+    <?= session()->getFlashdata('cartmsg') ?? '' ?>
+</div>
 
 
       <?php endif;?>
-      <a class="btn btn-primary text-white" href="">View Cart <span class="badge badge-warning">0</span></a>
+      <a class="btn btn-primary text-white" href="<?= base_url('salesdpt/pos');?>">POS</a>
     <table class='table table-responsive table-hover '>
             <thead>
                 <tr>
