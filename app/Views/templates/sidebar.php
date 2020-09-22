@@ -247,22 +247,22 @@
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
-              <p>Client  </p>
+              <p>Sales Persons  </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-              <a href="<?=base_url('client');?>" class="nav-link">
+              <a href="<?=base_url('salesperson');?>" class="nav-link">
                   <i class="fas fa-list nav-icon"></i>
                   <p>
-                    Client listing
+                    Sales listing
                   </p>
                 </a>
               </li>
               <li class="nav-item">
-              <a href="<?=base_url('client/add');?>" class="nav-link">
+              <a href="<?=base_url('salesperson/add');?>" class="nav-link">
                 
                   <i class="fas fa-list nav-icon"></i>
-                  <p>Add Client</p>
+                  <p>Add Sales Person</p>
                 </a>
               </li>
               
