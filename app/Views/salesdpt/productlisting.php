@@ -28,6 +28,9 @@
                         <td> <?=$product['name'] ?></td>
                         <td> <?=$product['price'] ?></td>
                             <form>
+                                <input type="hidden" name="id" value="<?=$product['id'] ?>" >
+                                <input type="hidden" name="name" value="<?=$product['name'] ?>" >
+                                <input type="hidden" name="price" value="<?=$product['price'] ?>" >
                                 <td><input class="form-controler" type="number" name="qty" placeholder="quantity"></td>
 <td><button class="btn btn-primary" type="submit">add to cart</button></td>
                             </form>
