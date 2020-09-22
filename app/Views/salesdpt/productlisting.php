@@ -1,4 +1,4 @@
-<?= $this->extend('templates/dashboard') ?>
+<?= $this->extend('salesdpt/templates/dashboard') ?>
 
 <!-- productlisting.php -->
 <?= $this->section('content') ?>
