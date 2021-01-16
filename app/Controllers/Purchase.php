@@ -53,6 +53,8 @@ class Purchase extends Controller
                     'purdate' => $this->request->getVar('purdate'),
                     'note' => $this->request->getVar('purnote'),                    
                     'type' => $this->request->getVar('purtype'),                    
+                    'ref' => $this->request->getVar('ref'),                    
+                    'quantity' => $this->request->getVar('quantity'),                    
                     'amount' => $this->request->getVar('puramount'),                    
                     'status' => $this->request->getVar('purstatus'),
                     'paid' => $this->request->getVar('purpay'),
@@ -89,10 +91,12 @@ class Purchase extends Controller
         if($this->request->getMethod() == 'post'){
             $model = new PurchaseModel();
             
-            $purchaseUpdate = [
+            $purchaseUpdate =[
                 'purdate' => $this->request->getVar('purdate'),
                 'note' => $this->request->getVar('purnote'),                    
                 'type' => $this->request->getVar('purtype'),                    
+                'ref' => $this->request->getVar('ref'),                    
+                'quantity' => $this->request->getVar('quantity'),                    
                 'amount' => $this->request->getVar('puramount'),                    
                 'status' => $this->request->getVar('purstatus'),
                 'paid' => $this->request->getVar('purpay'),

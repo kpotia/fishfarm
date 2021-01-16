@@ -38,12 +38,14 @@ class Product extends Controller
             if (! $this->validate($rules)) {
                 $data['validation'] = $this->validator;
             }else{
-                $model = new ProductModel();
+                $pmodel = new ProductModel();
                 $newData = [
                     'name' => $this->request->getVar('name'),
                     'price' => $this->request->getVar('price'),                                        
+                    'quantity' => $this->request->getVar('quantity'),                                        
+                    'category' => $this->request->getVar('category'),                                        
                 ];
-                $model->save($newData);$session = session();
+                $pmodel->save($newData);$session = session();
                 $session->setFlashData('success','product Added successfully');
                 return redirect()->to('/fishfarm_ci/public/product');
             }
@@ -72,8 +74,9 @@ class Product extends Controller
             $model = new ProductModel();
             $productUpdate = [
                 'name' => $this->request->getVar('name'),
-                'price' => $this->request->getVar('price'),                    
-                                
+                'price' => $this->request->getVar('price'),                                        
+                'quantity' => $this->request->getVar('quantity'),                                        
+                'category' => $this->request->getVar('category'),                                        
             ];
             $model->db->table('product')->update($productUpdate, ['id' => $id]);
             $session->setFlashData('success','product Data Updated');

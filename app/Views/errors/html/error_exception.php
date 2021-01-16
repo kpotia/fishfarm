@@ -136,7 +136,7 @@
 
 					<h3>$<?= $var ?></h3>
 
-					<table>
+					<table  class='table'>
 						<thead>
 							<tr>
 								<th>Key</th>
@@ -166,7 +166,7 @@
 				<?php if (! empty($constants['user'])) : ?>
 					<h3>Constants</h3>
 
-					<table>
+					<table  class='table'>
 						<thead>
 							<tr>
 								<th>Key</th>
@@ -195,7 +195,7 @@
 			<div class="content" id="request">
 				<?php $request = \Config\Services::request(); ?>
 
-				<table>
+				<table  class='table'>
 					<tbody>
 						<tr>
 							<td style="width: 10em">Path</td>
@@ -279,7 +279,7 @@
 
 					<h3>Headers</h3>
 
-					<table>
+					<table  class='table'>
 						<thead>
 							<tr>
 								<th>Header</th>
@@ -315,7 +315,7 @@
 				$response->setStatusCode(http_response_code());
 			?>
 			<div class="content" id="response">
-				<table>
+				<table  class='table'>
 					<tr>
 						<td style="width: 15em">Response Status</td>
 						<td><?= $response->getStatusCode() . ' - ' . $response->getReason() ?></td>
@@ -328,7 +328,7 @@
 
 					<h3>Headers</h3>
 
-					<table>
+					<table  class='table'>
 						<thead>
 							<tr>
 								<th>Header</th>
@@ -362,7 +362,7 @@
 			<!-- Memory -->
 			<div class="content" id="memory">
 
-				<table>
+				<table  class='table'>
 					<tbody>
 						<tr>
 							<td>Memory Usage</td>

@@ -10,7 +10,7 @@ class PurchaseModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['type','amount', 'purdate','note','status','supplier', 'paid'];
+    protected $allowedFields = ['type','amount', 'ref','purdate','note','status','supplier', 'quantity', 'paid'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';
@@ -25,6 +25,8 @@ class PurchaseModel extends Model
         $q = "SELECT
         purchases.purid,
         purchases.type,
+        purchases.ref,
+        purchases.quantity,
         purchases.purdate,
         supplier.name as suppliername,
         purchases.status,

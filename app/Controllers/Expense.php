@@ -64,10 +64,10 @@ class Expense extends Controller
         $model = new ExpenseModel();
         $session = session();
         //   fetch data
-        $Expense = $model->find($id);
+        $expense = $model->find($id);
         $data = [
             'title' => 'Update Expense Details',
-            'Expense' => $Expense,
+            'expense' => $expense,
             'action' => 'update'
         ];
         // load form with fetch data 
@@ -77,15 +77,15 @@ class Expense extends Controller
         if($this->request->getMethod() == 'post'){
             $model = new ExpenseModel();
             $ExpenseUpdate = [
-                'name' => $this->request->getVar('name'),
-                'description' => $this->request->getVar('description'),                    
-                'contact' => $this->request->getVar('contact'),                    
-                'email' => $this->request->getVar('email'),                    
-                'address' => $this->request->getVar('address'),                    
+                'exp_date' => $this->request->getVar('expdate'),
+                    'note' => $this->request->getVar('expnote'),                    
+                    'type' => $this->request->getVar('exptype'),                    
+                    'amount' => $this->request->getVar('expamount'),                    
+                    'status' => $this->request->getVar('expstatus'),                   
             ];
-            $model->db->table('Expense')->update($ExpenseUpdate, ['id' => $id]);
+            $model->db->table('expenses')->update($ExpenseUpdate, ['expid' => $id]);
             $session->setFlashData('success','Expense Data Updated');
-            return redirect()->to('/fishfarm_ci/public/Expense');
+            return redirect()->to('/fishfarm_ci/public/expense');
         }
     }
 

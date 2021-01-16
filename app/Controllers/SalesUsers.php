@@ -87,12 +87,36 @@ class SalesUsers extends BaseController
     {
         $session = session();
 
+        // load db and connect to db;
+        $db = \Config\Database::connect();
+        
+        
+        // product
+		$productcount_query= 'SELECT COUNT(*) as productcount from product';
+		$query = $db->query($productcount_query);
+        $productcount = $query->getResult('array');
+        
+        // order
+		$ordercount_query= 'SELECT COUNT(*) as ordercount from orders';
+		$query = $db->query($ordercount_query);
+		$ordercount = $query->getResult('array');
+
+        // sales
+		$salesum_query= 'SELECT sum(total) as salesum from orders';
+		$query = $db->query($salesum_query);
+        $salesum = $query->getResult('array');
+      
+
         // query to count data and display in dashboard
 
         if($session->isLoggedIn){
             $data = [
                 'title' => 'FishFarm  Sales Dashboard',
-                'session' => $session
+                'session' => $session,
+				'productcount' => $productcount[0]['productcount'],
+				'ordercount' => $ordercount[0]['ordercount'],
+				'sale' => $salesum[0]['salesum'],
+
             ];
             echo view('salesdpt/index', $data);
         }else {
@@ -134,8 +158,8 @@ class SalesUsers extends BaseController
             }
         }
         
-        echo view('templates/header', $data);
-        echo view('register', $data);
+        // echo view('templates/header', $data);
+        return view('salesperson/form', $data);
     }
 
     public function logout(){
@@ -144,7 +168,61 @@ class SalesUsers extends BaseController
     }
 
 
-    public list(){
+    public function list(){
+        $model = new SalesUserModel();
 
+        $salespersons = $model->findAll();
+        $session = session();
+
+        $data = [
+            'title' => 'Fish list',
+            'salespersons' => $salespersons,
+            'session' => $session
+        ];        
+        return view('salesperson/listing',$data);
+    }
+
+
+    public function edit($id)
+    {
+        helper('form');
+        $model = new SalesUserModel();
+        $session = session();
+        
+        $salespersons = $model->find($id);
+        $data = [
+            'title' => 'Update Sales User Details',
+            'Purchase' => $salespersons,
+            
+            'action' => 'update'
+        ];
+        // load form with fetch data 
+        echo view('Purchase/form',$data);
+
+        // 
+        if($this->request->getMethod() == 'post'){
+            $model = new SalesUserModel();
+            
+            $salespersonsUpdate = [
+                
+            ];
+            $model->db->table('salesusers')->update($salespersonsUpdate, ['purid' => $id]);
+            $session->setFlashData('success','Purchase Data Updated');
+            return redirect()->to('/fishfarm_ci/public/purchase');
+        }
+    }
+
+
+    public function delete($id)
+    {
+        $model = new SalesUserModel();
+        $session = session();
+        
+        if($model->delete($id)){
+                $session->setFlashData('success','Successful Deletion');}
+        else{
+            $session->setFlashData('fail','deletion failed');
+        }
+        return redirect()->to('/fishfarm_ci/public/salesperson');
     }
 }

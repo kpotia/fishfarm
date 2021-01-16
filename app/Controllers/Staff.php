@@ -37,6 +37,7 @@ class Staff extends Controller
                 'email' => 'required|min_length[3]|max_length[200]', 
                 'address' => 'required|min_length[3]|max_length[200]', 
                 'role' => 'required|min_length[3]|max_length[200]', 
+                'role' => 'required|min_length[3]|max_length[10]', 
             ];
     
             if (! $this->validate($rules)) {
@@ -46,10 +47,11 @@ class Staff extends Controller
                 $newData = [
                     'firstname' => $this->request->getVar('firstname'),
                     'surname' => $this->request->getVar('surname'),
-                    'description' => $this->request->getVar('description'),                    
+                    // 'description' => $this->request->getVar('description'),                    
                     'contact' => $this->request->getVar('contact'),                    
                     'email' => $this->request->getVar('email'),                    
                     'role' => $this->request->getVar('role'),                    
+                    'salary' => $this->request->getVar('salary'),                    
                     'address' => $this->request->getVar('address'),                    
                 ];
                 $model->save($newData);$session = session();
@@ -94,9 +96,11 @@ class Staff extends Controller
         if($this->request->getMethod() == 'post'){
             $model = new StaffModel();
             $staffUpdate = [
-                'name' => $this->request->getVar('name'),
-                'description' => $this->request->getVar('description'),                    
-                'contact' => $this->request->getVar('contact'),                    
+                'firstname' => $this->request->getVar('firstname'),
+                'surname' => $this->request->getVar('surname'),
+                // 'description' => $this->request->getVar('description'),
+                'contact' => $this->request->getVar('contact'),     
+                'salary' => $this->request->getVar('salary'),
                 'email' => $this->request->getVar('email'),                    
                 'address' => $this->request->getVar('address'),                    
             ];

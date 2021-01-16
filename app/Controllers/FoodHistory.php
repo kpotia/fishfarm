@@ -20,7 +20,7 @@ class FoodHistory extends Controller
 // return var_dump($fhs);
 
         $data = [
-            'title' => 'Fish Listing',
+            'title' => 'Food/Drug History',
             'fhs' => $fhs,
             'session' => $session
         ];
@@ -39,7 +39,7 @@ class FoodHistory extends Controller
         $fts = $ftm->getFT();
         helper('form');
         $data = [
-            'title' => 'Add Food History',
+            'title' => 'Add Food/drug History',
             'session' => $session,
             'fds' => $fds,
             'fts' => $fts
@@ -64,6 +64,7 @@ class FoodHistory extends Controller
                 $newData = [
                     'tank_id' => $ftd['tk_id'],
                     'fish_id' => $ftd['fish_id'],
+                    'fishqty' => $ftd['qty'],
                     'food_id' => $this->request->getVar('food'),
                     'qty' => $this->request->getVar('qty'),                    
                     'date' => $this->request->getVar('date'),                    

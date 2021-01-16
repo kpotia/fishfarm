@@ -1,9 +1,9 @@
 <?= $this->extend('templates/dashboard') ?>
-<!-- product Listing -->
+<!-- product list -->
 <?= $this->section('content') ?>
     <div class="row">
 
-    <div class="col-10 bg-white">
+    <div class="col-12 bg-white">
     <?php if(session()->get('success')): ?>
   <div class="alert alert-success" role="alert">
     <?= session()->get('success') ?>
@@ -11,11 +11,13 @@
     <?php elseif(session()->get('fail')): ?>
         <?= session()->get('fail') ?>
     <?php endif;?>
-    <table class='table table-responsive table-hover '>
+    <table class='table table-hover '>
             <thead>
                 <tr>
                     <th>Product ID</th>
                     <th>Product Name</th>
+                    <th>category</th>
+                    <th>Quantity</th>
                     <th>Product Price</th>
                     <th>Options</th>
                 </tr>
@@ -25,6 +27,8 @@
                     <tr>
                         <td> <?=$product['id'] ?></td>
                         <td> <?=$product['name'] ?></td>
+                        <td> <?=$product['category'] ?></td>
+                        <td> <?=$product['quantity'] ?></td>
                         <td> <?=$product['price'] ?></td>
                         
                         <td>

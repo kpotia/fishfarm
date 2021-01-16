@@ -8,8 +8,13 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in to start your session</p>
       <?php if(session()->get('success')): ?>
-  <div class="alert alert-success" role="alert">
-    <?= session()->get('success') ?>
+      <div class="alert alert-success" role="alert">
+        <?= session()->get('success') ?>
+      </div>
+      <?php endif;?>
+  <?php if(session()->get('auth')): ?>
+    <div class="alert alert-info" role="alert">
+    <?= session()->get('auth') ?>
   </div>
       <?php endif;?>
       <form action="#" method="post">
@@ -35,7 +40,6 @@
               <?= $validation->listErrors();?>
             </div>
           </div>
-
         <?php endif;?>
         <div class="row">
           <!-- /.col -->

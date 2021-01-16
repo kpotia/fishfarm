@@ -10,7 +10,7 @@ class ExpenseModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['type','amount', 'exp_date','notes','status'];
+    protected $allowedFields = ['type','amount', 'exp_date','note','status'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';

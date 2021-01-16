@@ -14,22 +14,26 @@
         <table class='table  table-hover '>
             <thead>
                 <tr>
-                    <th>sales person ID</th>
-                    <th>sales person Name</th>
-                    <th>sales person email</th>
+                    <th>Inventory ID</th>
+                    <th>Inventory Name</th>
+                    <th>Inventory Type</th>
+                    <th>Inventory Quantity</th>
+                    <th>Inventory Date</th>
+                   
                     <th>Options</th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($salespersons as $salesperson): ?>
+                <?php foreach($inventorys as $inventory): ?>
                 <tr>
-                    <td> <?=$salesperson['id'] ?></td>
-                    <td> <?=$salesperson['firstname'].' '.$salesperson['lastname'] ?></td>
-                    <td> <?=$salesperson['email'] ?></td>
-                    
+                    <td> <?=$inventory['id'] ?></td>
+                    <td> <?=$inventory['name'] ?></td>
+                    <td> <?=$inventory['type'] ?></td>
+                    <td> <?=$inventory['qty'] ?></td>
+                    <td> <?=$inventory['date'] ?></td>
                     <td>
-                        <!-- <a href="salesperson/edit/<?=$salesperson['id'] ?>" class="btn btn-secondary">edit</a> -->
-                        <a href="salesperson/delete/<?=$salesperson['id'] ?>" class="btn btn-danger">delete</a>
+                        <a href="inventory/edit/<?=$inventory['id'] ?>" class="btn btn-warning">edit</a>
+                        <a href="inventory/delete/<?=$inventory['id'] ?>" class="btn btn-danger">delete</a>
                     </td>
                 </tr>
                 <?php endforeach; ?>

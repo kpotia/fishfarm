@@ -10,6 +10,7 @@ class Auth implements FilterInterface
     {
         // Do something here
         if(! session()->get('isLoggedIn')){
+            session()->setFlashdata('auth','Your are not allow to access this page');
             return redirect()->to('/fishfarm_ci/public/');
         }
     }

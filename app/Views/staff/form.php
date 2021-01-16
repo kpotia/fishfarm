@@ -32,6 +32,11 @@
                 <label>Staff role</label>
                 <input class="form-control" type="text" value="<?= $staff['role'] ?? set_value('role')?>"  required name="role">
             </div>
+
+            <div class="form-group">
+                <label>Staff salary</label>
+                <input class="form-control" type="text" value="<?= $staff['salary'] ?? set_value('salary')?>"  required name="salary">
+            </div>
             
             <?php if(isset($validation)):?>
           <div class="col-12">

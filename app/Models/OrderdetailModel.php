@@ -2,20 +2,19 @@
 
 use CodeIgniter\Model;
 
-class StaffModel extends Model
+class OrderModel extends Model
 {
-    protected $table      = 'staff';
+    protected $table      = 'orders';
     protected $primaryKey = 'id';
 
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['firstname','surname', 'role','salary','contact','email','address'];
+    protected $allowedFields = ['orderdate','paymeth','client','paid','total'];
 
-    protected $useTimestamps = false;
+    protected $useTimestamps = true;
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
-    protected $deletedField  = 'deleted_at';
 
     protected $validationRules    = [];
     protected $validationMessages = [];

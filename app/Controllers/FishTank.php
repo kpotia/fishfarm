@@ -19,7 +19,7 @@ class FishTank extends Controller
 
 
         $data = [
-            'title' => 'Fish Listing',
+            'title' => 'Fish list',
             'fishtank' => $model->getFT(),
             'session' => $session
         ];
@@ -46,7 +46,7 @@ class FishTank extends Controller
             $rules = [
                 'fish_id' => 'required',
                 'qty' => 'required',
-                'date' => 'required',
+                'birthdate' => 'required',
             ];
             // save data 
             if (! $this->validate($rules)) {
@@ -56,7 +56,7 @@ class FishTank extends Controller
                 $newData = [
                     'fish_id' => $this->request->getVar('fish_id'),
                     'qty' => $this->request->getVar('qty'),                    
-                    'birthdate' => $this->request->getVar('date'),                    
+                    'birthdate' => $this->request->getVar('birthdate'),                    
                 ];
                 $model->save($newData);
                 $session = session();

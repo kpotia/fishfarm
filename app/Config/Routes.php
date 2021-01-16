@@ -33,7 +33,7 @@ $routes->setAutoRoute(true);
 $routes->match(['get','post'],'/', 'Users::index',['filter' => 'noauth']);
 $routes->match(['get','post'],'logout', 'Users::logout');
 $routes->match(['get','post'],'register', 'Users::register',['filter' => 'noauth']);
-// $routes->match(['get','post'],'test', 'Test::index');
+$routes->add('dashboard', 'Dashboard::index',['filter' => 'auth']);
 
 
 // Fish Routes
@@ -62,17 +62,7 @@ $routes->group('food',['filter' => 'auth'], function($routes){
 	});
 });
 
-// Vaccin Rootes
-$routes->group('vaccine',['filter' => 'auth'], function($routes){
-	$routes->add('/','vaccine::index');
-	$routes->match(['get','post'],'add','vaccine::create');
 
-	$routes->group('history', function($routes){
-		$routes->add('/','vaccinehistory::index');
-		$routes->match(['get','post'],'add','vaccinehistory::create');
-
-	});
-});
 
 // staff
 $routes->group('staff', ['filter' => 'auth'],function($routes){
@@ -84,8 +74,8 @@ $routes->group('staff', ['filter' => 'auth'],function($routes){
 });
 // salesperson
 $routes->group('salesperson', ['filter' => 'auth'],function($routes){
-	$routes->add('/','SalesUsers::index');
-	$routes->add('add','SalesUsers::create');
+	$routes->add('/','SalesUsers::list');
+	$routes->add('add','SalesUsers::register');
 	$routes->add('view/(:any)','SalesUsers::view/$1');
 	$routes->add('edit/(:any)','SalesUsers::edit/$1');
 	$routes->add('delete/(:any)','SalesUsers::delete/$1');
@@ -121,24 +111,43 @@ $routes->group('supplier',['filter' => 'auth'],function($routes){
 	$routes->get('delete/(:any)','Supplier::delete/$1');
 });
 
+// Inventory
+$routes->group('inventory',['filter' => 'auth'],function($routes){
+	$routes->add('/','Inventory::index');
+	$routes->match(['get','post'],'add','Inventory::create');	
+	$routes->match(['get','post'],'edit/(:any)','Inventory::edit/$1');
+	$routes->get('delete/(:any)','Inventory::delete/$1');
+});
+
+// login sales dept 
+$routes->match(['get','post'],'salesdpt','SalesUsers::index');
+
+
 // Salesdpt
-$routes->group('salesdpt', function ($routes){
-	$routes->match(['get','post'],'/','SalesUsers::index');
+$routes->group('salesdpt',['filter' => 'auth'], function ($routes){
 	$routes->add('dashboard','SalesUsers::dashboard');
 	$routes->match(['get','post'],'pos','Pos::index');
 	$routes->match(['get','post'],'viewcart','Pos::viewcart');
+	$routes->match(['get','post'],'clearcart','Pos::clearcart');
+	$routes->match(['get','post'],'checkout','Pos::checkout');
+	$routes->match(['get','post'],'orders','Pos::orders');
+	$routes->match(['get','post'],'order/(:any)','Pos::orderdetail/$1');
+	$routes->match(['get','post'],'addtocart/(:any)','Pos::addtocart/$1');
+});
+
+
+// reports
+
+$routes->group('report',['filter' => 'auth'], function($routes){
+	$routes->add('/','Report::index');
+	$routes->add('financial','Report::financial');
+	$routes->add('supplier','Report::supplier');
+	$routes->add('today','Report::today');
+
 });
 
 // register sales dpt 
 $routes->match(['get','post'],'registersalesperson','SalesUsers::register',['filter'=>'auth']);
-
-// setting
-$routes->group('setting',['filter' => 'auth'], function($routes){
-	$routes->add('/','setting::index');
-	$routes->add('backup','backup::index');
-	$routes->add('backup/dl','backup::dl');
-	$routes->add('backup/dl/(:any)','backup::dl/$1');
-});
 
 /**
  * --------------------------------------------------------------------

@@ -3,13 +3,13 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\FishModel;
+use App\Models\ProductModel;
 
 
 
 class Fish extends Controller
 {
     // public $fishModel = new FishModel;
-
     public function index()
 	{
         $model = new FishModel();
@@ -19,18 +19,19 @@ class Fish extends Controller
 
 
         $data = [
-            'title' => 'Fish Listing',
+            'title' => 'Fish list',
             'fishes' => $fishes,
             'session' => $session
         ];
 
         
-        return view('FishListing',$data);
+        return view('Fishlisting',$data);
     }
 
     public function create()
     {
         $session = session();
+        helper('form');
 
         $data = [
             'title' => 'Add Fish',
@@ -40,7 +41,8 @@ class Fish extends Controller
         if($this->request->getMethod() == 'post'){
             $rules = [
                 'fishName' => 'required|min_length[3]|max_length[30]',
-                'fishDescription' => 'required|min_length[3]|max_length[200]',   
+                'fishDescription' => 'required|min_length[3]|max_length[200]',
+                'fishprice' => 'required',
             ];
     
             if (! $this->validate($rules)) {
@@ -49,8 +51,17 @@ class Fish extends Controller
                 $model = new FishModel();
                 $newData = [
                     'name' => $this->request->getVar('fishName'),
+                    'price' => $this->request->getVar('fishprice'),
                     'description' => $this->request->getVar('fishDescription'),                    
                 ];
+                $pmodel = new ProductModel();
+
+                $productdata = [
+                    'name' => $this->request->getVar('fishName'),
+                    'price' => $this->request->getVar('fishprice'),                                 
+                ];
+                $pmodel->save($productdata);
+
                 $model->save($newData);$session = session();
                 $session->setFlashData('success','Fish Added successfully');
                 return redirect()->to('/fishfarm_ci/public/fish');

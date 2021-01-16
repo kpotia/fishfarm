@@ -2,7 +2,7 @@
 
 use CodeIgniter\Model;
 
-class ClientModel extends Model
+class OrderModel extends Model
 {
     protected $table      = 'orders';
     protected $primaryKey = 'id';
@@ -10,7 +10,7 @@ class ClientModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['orderdate','status','client','paid','total'];
+    protected $allowedFields = ['orderdate','paymeth','client','total'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';

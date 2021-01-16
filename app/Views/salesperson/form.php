@@ -2,7 +2,7 @@
 
 <?= $this->section('content') ?>
     <div class="row">
-      <div class="card">
+      <div class="card col-8">
     <div class="card-body register-card-body">
       <p class="login-box-msg">Register a new membership</p>
   <?php if(session()->get('success')): ?>

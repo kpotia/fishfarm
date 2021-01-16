@@ -2,6 +2,9 @@
 
 <!-- product/listing.php -->
 <?= $this->section('content') ?>
+
+<a href="#" onclick = 'window.print()' class="btn btn-primary text-white d-print-none  mb-3">Print</a>
+
     <div class="row">
 
     <div class="col-12 bg-white">
@@ -20,26 +23,36 @@
 </div>
     <?php endif;?>
 
-      <!-- form to submit client details -->
-      <div class="card" style='width:300px;'>
-        <form action="checkout" method="post" class='card-body' >
-        <div class='form-group'>
-            <label for="custname">Client Name</label>
-            <input type="text" name='custname' class='form-control'>
-          </div>
+    <h2 class='d-print-block d-sm-none col-12'><?=$title?></h2>
 
-          <div class='form-group'>
-            <label for="">Payment Method</label><br>
-            <label for="cash">Cash <input type="radio" checked name="paymeth" id="cash" value='cash'></label>
-            <label for="cheque">Cheque <input type="radio" name="paymeth" id="cheque" value='cheque'></label>
-          </div>
-          <button class='btn btn-primary'>submit</button>
-        </form>
+<div class="row">
+       <!-- form to submit client details -->
+       <div class="col-4 card" style='width:300px;'>
+        <div class="card-body">
+            <ul style='list-style-type:none;'> 
+            <li>Order Date: <?= $order['orderdate']?></li>
+            <li>Client: <?= $order['client']?></li>
+            <li>Payment Method: <?= $order['paymeth']?></li>
+            </ul>
+        </div>
       </div>
-      
 
+      <div class="col-3"></div>
 
-      <a class="btn btn-primary text-white" href="<?= base_url('salesdpt/pos');?>">POS</a>
+      <div class="card col-4 bg-secondary" style='width:300px;'>
+        <div class="card-body">
+            <ul style='list-style-type:none;'> 
+            <li><h4>Arewa Fishfarm</h4></li>
+            <li><p>Address: Abuja, Nigeria</p></li>
+            <li><p>contact: +234 904848 </p></li>
+          
+            </ul>
+        </div>
+      </div>
+
+</div>
+     
+
     <table class='table table-hover '>
             <thead>
                 <tr>
@@ -50,12 +63,12 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($cart['items'] as $cartitem): ?>
+                <?php foreach($order['items'] as $cartitem): ?>
                     <tr>
-                        <td> <?=$cartitem['item_name'] ?></td>
-                        <td> <?=$cartitem['item_price'] ?></td>
-                        <td><?=$cartitem['item_quantity'] ?></td>
-                        <td><?=$cartitem['item_subtotal'] ?></td>
+                        <td> <?=$cartitem['product_id'] ?></td>
+                        <td> <?=$cartitem['price'] ?></td>
+                        <td><?=$cartitem['qty'] ?></td>
+                        <td><?=$cartitem['subtotal'] ?></td>
 
                             </form>
                         
@@ -67,7 +80,7 @@
                     <th></th>
                     <th></th>
                     <th>Total</th>
-                    <th><?=$cart['total']?></th>
+                    <th><?=$order['total']?></th>
                   </tr>
             </tfoot>
         </table>

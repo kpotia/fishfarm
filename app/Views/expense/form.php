@@ -16,6 +16,7 @@
                     <option value="water">Water Bill</option>
                     <option value="electricity">Electricity Bill</option>
                     <option value="maintenance">Maintenance Bill</option>
+                    <option value="Taxes">Taxes</option>
                     <option value="salary">Salary</option>
                     <option value="other">Other Bill</option>
                     </select>

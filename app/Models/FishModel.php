@@ -10,7 +10,7 @@ class FishModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['name', 'description','photo'];
+    protected $allowedFields = ['name', 'price','description','photo'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';

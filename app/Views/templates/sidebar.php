@@ -43,7 +43,7 @@
                   
                   <i class="fas fa-list nav-icon"></i>
                   <p>
-                    Fish listing
+                    Fish list
                   </p>
                 </a>
               </li>
@@ -68,7 +68,7 @@
                   
                   <i class="fas fa-list nav-icon"></i>
                   <p>
-                    Fish tank listing
+                    Fish tank list
                   </p>
                 </a>
               </li>
@@ -94,7 +94,7 @@
                   
                   <i class="fas fa-list nav-icon"></i>
                   <p>
-                    Product listing
+                    Product list
                   </p>
                 </a>
               </li>
@@ -112,7 +112,7 @@
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-utensils"></i>
-              <p>Food  </p>
+              <p>Food & Drugs </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
@@ -121,78 +121,63 @@
                   
                   <i class="fas fa-list nav-icon"></i>
                   <p>
-                    Food listing
+                    Food/Drug 
                   </p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="<?= base_url('food/add'); ?>" class="nav-link">
                   <i class="fas fa-plus nav-icon"></i>
-                  <p>Add Food </p>
+                  <p>Add Food/Drug </p>
                 </a>
               </li>
               
             
               <li class="nav-item">
-                <a href="<?= base_url('food/history');?>" class="nav-link">
-                  
+                <a href="<?= base_url('food/history');?>" class="nav-link">                  
                   <i class="fas fa-list nav-icon"></i>
                   <p>
-                    Food History listing
+                    Food/Drug History
                   </p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php base_url('food/history/add'); ?>" class="nav-link">
+                <a href="<?= base_url('food/history/add');?>" class="nav-link">                  
                   <i class="fas fa-plus nav-icon"></i>
-                  <p>Add Food History</p>
+                  <p>
+                    Add Food/Drug History 
+                  </p>
                 </a>
               </li>
               
             </ul>
           </li>
+
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-syringe"></i>
-              <p>Vaccination</p>
+              <i class="nav-icon fab fa-houzz"></i>
+              <p>Inventory </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= base_url('vaccine') ?>" class="nav-link">
-                  <i class="fas fa-list nav-icon"></i>
-                  <p>
-                    Vaccination listing
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?=base_url('vaccine/add')?>" class="nav-link">
-                  <i class="fas fa-plus nav-icon"></i>
-                  <p>Add Vaccination</p>
-                </a>
-              </li>
-              
-            </ul>
-          
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="<?= base_url('vaccine/history')?>" class="nav-link">
+              <a href="<?= base_url('inventory'); ?>" class="nav-link">
+                
                   
                   <i class="fas fa-list nav-icon"></i>
                   <p>
-                    Vaccination history listing
+                    Inventory
                   </p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('vaccine/history/add');?>" class="nav-link">
+                <a href="<?= base_url('inventory/add'); ?>" class="nav-link">
                   <i class="fas fa-plus nav-icon"></i>
-                  <p>Add Vaccination history</p>
+                  <p>Add Inventory </p>
                 </a>
-              </li>
-              
+              </li>             
             </ul>
           </li>
+         
 
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -205,7 +190,7 @@
                   
                   <i class="fas fa-list nav-icon"></i>
                   <p>
-                    Supplier listing
+                    Supplier list
                   </p>
                 </a>
               </li>
@@ -230,7 +215,7 @@
                   
                   <i class="fas fa-list nav-icon"></i>
                   <p>
-                    Staff listing
+                    Staff list
                   </p>
                 </a>
               </li>
@@ -254,7 +239,7 @@
               <a href="<?=base_url('salesperson');?>" class="nav-link">
                   <i class="fas fa-list nav-icon"></i>
                   <p>
-                    Sales listing
+                    Sales list
                   </p>
                 </a>
               </li>
@@ -282,7 +267,7 @@
                   
                   <i class="fas fa-list nav-icon"></i>
                   <p>
-                    Expense listing
+                    Expense list
                   </p>
                 </a>
               </li>
@@ -307,31 +292,23 @@
                 <a href="<?=base_url('report/financial')?>" class="nav-link">
                   <i class="fas fa-list nav-icon"></i>
                   <p>
-                    Financial Report
+                    Financial 
                   </p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?=base_url('report/fish')?>" class="nav-link">
+                <a href="<?=base_url('report/supplier')?>" class="nav-link">
                   <i class="fas fa-list nav-icon"></i>
                   <p>
-                    Fish Report
+                    Supplier
                   </p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?=base_url('report/sales')?>" class="nav-link">
+                <a href="<?=base_url('report/today')?>" class="nav-link">
                   <i class="fas fa-list nav-icon"></i>
                   <p>
-                    Sales Report
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?=base_url('report/Expense')?>" class="nav-link">
-                  <i class="fas fa-list nav-icon"></i>
-                  <p>
-                    Expense Report
+                    Today
                   </p>
                 </a>
               </li>             
@@ -350,7 +327,7 @@
                   
                   <i class="fas fa-list nav-icon"></i>
                   <p>
-                    Purchase listing
+                    Purchase list
                   </p>
                 </a>
               </li>
@@ -363,13 +340,13 @@
               
             </ul>
           </li>
-          <li class="nav-item">
+         <!--  <li class="nav-item">
             <a href="<?= base_url('setting'); ?>" class="nav-link">
             
               <i class="nav-icon fas fa-cog"></i>
               <p>Setting</p>
             </a>            
-          </li>
+          </li> -->
           <li class="nav-item">
             <a href="<?= base_url('logout'); ?>" class="nav-link">
             

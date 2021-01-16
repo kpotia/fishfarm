@@ -2,20 +2,19 @@
 
 use CodeIgniter\Model;
 
-class StaffModel extends Model
+class InventoryModel extends Model
 {
-    protected $table      = 'staff';
+    protected $table      = 'inventory';
     protected $primaryKey = 'id';
 
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['firstname','surname', 'role','salary','contact','email','address'];
+    protected $allowedFields = ['name','type','date','qty','address'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
-    protected $deletedField  = 'deleted_at';
 
     protected $validationRules    = [];
     protected $validationMessages = [];

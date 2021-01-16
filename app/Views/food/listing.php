@@ -3,7 +3,7 @@
 <?= $this->section('content') ?>
     <div class="row">
 
-    <div class="col-10 bg-white">
+    <div class="col-12 bg-white">
     <?php if(session()->get('success')): ?>
   <div class="alert alert-success" role="alert">
     <?= session()->get('success') ?>
@@ -12,12 +12,13 @@
     <?= session()->get('fail') ?>
 
       <?php endif;?>
-    <table class='table table-responsive table-hover '>
+    <table class='table  table-hover '>
             <thead>
                 <tr>
                     <th>Food ID</th>
-                    <th>Food Name</th>
-                    <th>Fish Qty</th>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Qty</th>
                     <th>Options</th>
                 </tr>
             </thead>
@@ -25,6 +26,7 @@
                 <?php foreach($Food as $fd): ?>
                     <tr>
                         <td> <?=$fd['fd_id'] ?></td>
+                        <td> <?=$fd['type'] ?></td>
                         <td> <?=$fd['name'] ?></td>
                         <td> <?=$fd['qty'] ?></td>
                         <td>

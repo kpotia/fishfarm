@@ -10,7 +10,7 @@ class FoodhistoryModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['food_id','fish_id','tank_id', 'qty','date'];
+    protected $allowedFields = ['food_id','fish_id','tank_id', 'fishqty', 'qty','date'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';
@@ -30,6 +30,7 @@ class FoodhistoryModel extends Model
         food.name as foodname,
         fish.name as fishname,
         food_history.qty,
+        food_history.fishqty,
         food_history.date
     FROM
         food_history,fish_tank,food,fish

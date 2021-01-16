@@ -1,4 +1,4 @@
-<?= $this->extend('templates/dashboard') ?>
+<?= $this->extend('salesdpt/templates/dashboard') ?>
 
 <?= $this->section('content') ?>
     <div class="row">
@@ -15,22 +15,23 @@
     <table class='table  table-hover '>
             <thead>
                 <tr>
-                    <th>Fish Tank ID</th>
-                    <th>Fish Name</th>
-                    <th>Fish Qty</th>
-                    <th>Birtdate</th>
+                    <th>Date</th>
+                    <th>client</th>
+                    <th>Payment Method</th>
+                    <th>Amount</th>
+                    
                     <th>Options</th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($fishtank as $ft): ?>
+                <?php foreach($orders as $order): ?>
                     <tr>
-                        <td> <?=$ft['ft_id'] ?></td>
-                        <td> <?=$ft['fishname'] ?></td>
-                        <td> <?=$ft['qty'] ?></td>
-                        <td> <?=$ft['birthdate'] ?></td>
+                        <td> <?=$order['orderdate'] ?></td>
+                        <td> <?=$order['client'] ?></td>
+                        <td> <?=$order['paymeth'] ?></td>
+                        <td> <?=$order['total'] ?></td>
                         <td>
-                            <a href="<?= base_url('fish/tank/delete/'.$ft['ft_id']) ?>" class="btn btn-danger">delete</a> 
+                            <a href="<?= base_url('salesdpt/order/'.$order['or_id']) ?>" class="btn btn-info">view details</a> 
                         </td>
                     </tr>
                 <?php endforeach; ?>

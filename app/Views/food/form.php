@@ -5,8 +5,15 @@
     <div class="col-md-6">
         <form action="" method="post">
 
+        <div class="form-group">
+                    <label for="my-select">Type</label>
+                   <select class="form-control" type="text" name="type">
+                   <option value="food">Food</option>
+                   <option value="drug">Drug</option>
+                   </select>
+                </div>
                 <div class="form-group">
-                    <label for="my-select">Food Name</label>
+                    <label for="my-select">Name</label>
                    <input class="form-control" type="text" name="FoodName">
                 </div>
                 <div class="form-group">

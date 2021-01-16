@@ -19,7 +19,7 @@ class Food extends Controller
 
 
         $data = [
-            'title' => 'Food Listing',
+            'title' => 'Food/Drug list',
             'Food' => $Food,
             'session' => $session
         ];
@@ -33,7 +33,7 @@ class Food extends Controller
         $session = session();
 
         $data = [
-            'title' => 'Add Food',
+            'title' => 'Add Food/Drug',
             'session' => $session
         ];
         // load form 
@@ -49,10 +49,11 @@ class Food extends Controller
                 $model = new FoodModel();
                 $newData = [
                     'name' => $this->request->getVar('FoodName'),
+                    'type' => $this->request->getVar('type'),
                     'qty' => $this->request->getVar('Foodqty'),                    
                 ];
                 $model->save($newData);$session = session();
-                $session->setFlashData('success','Food Added successfully');
+                $session->setFlashData('success','Added successfully');
                 return redirect()->to('/fishfarm_ci/public/food');
             }
         }
@@ -81,7 +82,8 @@ class Food extends Controller
     if($this->request->getMethod() == 'post'){
         $FoodUpdate = [
             'name' => $this->request->getVar('FoodName'),
-            'description' => $this->request->getVar('Foodqty')
+            'type' => $this->request->getVar('type'),
+            'qty' => $this->request->getVar('Foodqty'),                    
         ];
         $model->db->table('Food')->update($FoodUpdate, ['id' => $id]);
         $session->setFlashData('success','Food Data Updated');

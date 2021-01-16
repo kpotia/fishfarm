@@ -1,20 +1,26 @@
 <?= $this->extend('salesdpt/templates/dashboard') ?>
 
-<!-- productlisting.php -->
+<!-- product/listing.php -->
 <?= $this->section('content') ?>
     <div class="row">
 
-    <div class="col-10 bg-white">
+    <div class="col-12 bg-white">
     <?php if(session()->get('success')): ?>
   <div class="alert alert-success" role="alert">
     <?= session()->get('success') ?>
   </div>
     <?php elseif(session()->get('fail')): ?>
+  <div class="alert alert-warning" role="alert">
     <?= session()->get('fail') ?>
-
-      <?php endif;?>
-      <a class="btn btn-primary text-white" href="">View Cart <span class="badge badge-warning">0</span></a>
-    <table class='table table-responsive table-hover '>
+    </div>
+    <?php elseif(session()->get('info')):?>
+        <div class="alert alert-info" role="alert">
+            <?= session()->get('info') ?>
+        </div>
+    <?php endif;?>
+      <a class="btn btn-primary text-white" href="viewcart">View Order <span class="badge badge-warning"><?= $count ?? 0 ?></span></a>
+      <a class="btn btn-primary text-white" href="clearcart">Clear Order</span></a>
+    <table class='table  table-hover '>
             <thead>
                 <tr>
                     <th>Product Name</th>
@@ -25,13 +31,13 @@
             <tbody>
                 <?php foreach($products as $product): ?>
                     <tr>
-                        <td> <?=$product['name'] ?></td>
+                        <td> <span class='badge badge-primary'><?= $product['category'] ?></span> <?=$product['name'] ?></td>
                         <td> <?=$product['price'] ?></td>
-                            <form>
+                            <form method = 'POST' action='addtocart/<?=$product['id']?>'> 
                                 <input type="hidden" name="id" value="<?=$product['id'] ?>" >
-                                <input type="hidden" name="name" value="<?=$product['name'] ?>" >
-                                <input type="hidden" name="price" value="<?=$product['price'] ?>" >
-                                <td><input class="form-controler" type="number" name="qty" placeholder="quantity"></td>
+                                <input type="hidden" name="hidden_name" value="<?=$product['name'] ?>" >
+                                <input type="hidden" name="hidden_price" value="<?=$product['price'] ?>" >
+                                <td><input class="form-controler" type="number" name="quantity" min=1 value='1' reuired placeholder="quantity"></td>
 <td><button class="btn btn-primary" type="submit">add to cart</button></td>
                             </form>
                         

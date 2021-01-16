@@ -10,20 +10,35 @@
                     <input class="form-control" required type="date" name="purdate"  required value="<?= $purchase['purdate'] ?? set_value('purdate')?>">
                 </div>
 
-                <div class="form-group">
+<div class="form-group">
+    <label for="ref"> Ref</label>
+    <input name="ref" class='form-control' required id="ref">
+    
+</div>
+
+
+<div class="form-group">
                     <label for="purtype"> Type</label>
                     <input name="purtype" class='form-control' required id="purtype">
                     
                 </div>
+                
+                <div class="form-group">
+                    <label for="my-select">Name</label>
+                    <textarea name="purnote" class='form-control' required><?= $purchase['note'] ?? set_value('purnote')?></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="my-select">Quantity</label>
+                    <textarea name="quantity" class='form-control' required><?= $purchase['quantity'] ?? set_value('quantity')?></textarea>
+                </div>
+
                 <div class="form-group">
                     <label for="my-select">Amount</label>
                     <input class="form-control" required type="Text" name="puramount"  value="<?= $purchase['amount'] ?? set_value('puramount')?>">
                 </div>
 
-                <div class="form-group">
-                    <label for="my-select">Note</label>
-                    <textarea name="purnote" class='form-control' required><?= $purchase['note'] ?? set_value('purnote')?></textarea>
-                </div>
+                
                 <div class="form-group">
                     <label for="supplier">Supplier</label>
                     <select name="supplier" class='form-control' required id="supplier"  value="<?= $purchase['supplier'] ?? set_value('supplier')?>">

@@ -3,7 +3,7 @@
 <?= $this->section('content') ?>
 <div class="row">
 
-    <div class="col-10 bg-white">
+    <div class="col-12 bg-white">
 
         <div class="card">
             <div class="card-header">

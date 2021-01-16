@@ -1,20 +1,18 @@
-<?= $this->extend('salesdpt/templates/dashboard') ?>
+<?= $this->extend('templates/dashboard') ?>
 
 <?= $this->section('content') ?>
+<a href="#" onclick = 'window.print()' class="btn btn-primary text-white d-print-none  mb-3">Print</a>
     <div class="row">
+    <h2 class='d-print-block d-sm-none'><?=$title?></h2>
         <div class="col-lg-3 col-6">
             <!-- small card -->
             <div class="small-box bg-primary">
                 <div class="inner">
-                <h3><?=$productcount?>
-                </h3>
-
-                <p>Product</p>
+            
+                <p>Financial</p>
                 </div>
-                <div class="icon">
-                <i class="fas fa-fish"></i>
-                </div>
-                <a href="<?= base_url('salesdpt/pos');?>" class="small-box-footer">
+            
+                <a href="#" class="small-box-footer">
                 More info <i class="fas fa-arrow-circle-right"></i>
                 </a>
             </div>
@@ -25,13 +23,11 @@
             <!-- small card -->
             <div class="small-box bg-primary">
                 <div class="inner">
-                <h3><?=$ordercount?></h3>
+
                 <p>Orders</p>
                 </div>
-                <div class="icon">
-                <i class="fas fa-users"></i>
-                </div>
-                <a href="<?= base_url('salesdpt/orders');?>" class="small-box-footer">
+               
+                <a href="#" class="small-box-footer">
                 More info <i class="fas fa-arrow-circle-right"></i>
                 </a>
             </div>
@@ -41,14 +37,9 @@
             <!-- small card -->
             <div class="small-box bg-success">
                 <div class="inner">
-                <h3><?=$sale ?? '0.00'?> NGN</h3>
-
                 <p>Sales</p>
                 </div>
-                <div class="icon">
-                <i class="fas fa-money-bill-wave"></i>
-                </div>
-                <a href="<?= base_url('salesdpt/orders');?>" class="small-box-footer">
+                <a href="#" class="small-box-footer">
                 More info <i class="fas fa-arrow-circle-right"></i>
                 </a>
             </div>

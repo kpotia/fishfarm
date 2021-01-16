@@ -8,29 +8,31 @@
   <div class="alert alert-success" role="alert">
     <?= session()->get('success') ?>
   </div>
-    <?php elseif(session()->get('fail')): ?> 
+    <?php elseif(session()->get('fail')): ?>
     <?= session()->get('fail') ?>
 
       <?php endif;?>
+
+      <div class="row">
+        
+      </div>
     <table class='table  table-hover '>
             <thead>
                 <tr>
-                    <th>Fish Tank ID</th>
-                    <th>Fish Name</th>
-                    <th>Fish Qty</th>
-                    <th>Birtdate</th>
+                    <th>Attributes</th>
+                    
                     <th>Options</th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($fishtank as $ft): ?>
+                <?php foreach($fishes as $fish): ?>
                     <tr>
-                        <td> <?=$ft['ft_id'] ?></td>
-                        <td> <?=$ft['fishname'] ?></td>
-                        <td> <?=$ft['qty'] ?></td>
-                        <td> <?=$ft['birthdate'] ?></td>
+                        <td> <?=$fish['id'] ?></td>
+                        <td> <?=$fish['name'] ?></td>
+                        <td> <?=$fish['description'] ?></td>
                         <td>
-                            <a href="<?= base_url('fish/tank/delete/'.$ft['ft_id']) ?>" class="btn btn-danger">delete</a> 
+                            <a href="fish/edit/<?=$fish['id'] ?>" class="btn btn-warning" >edit</a> 
+                            <a href="fish/delete/<?=$fish['id'] ?>" class="btn btn-danger">delete</a> 
                         </td>
                     </tr>
                 <?php endforeach; ?>

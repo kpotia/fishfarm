@@ -1,7 +1,7 @@
 <?= $this->extend('templates/dashboard') ?>
 <?= $this->section('content') ?>
     <div class="row">
-    <div class="col-10 bg-white">
+    <div class="col-12 bg-white">
     <?php if(session()->get('success')): ?>
   <div class="alert alert-success" role="alert">
     <?= session()->get('success') ?>
@@ -10,7 +10,7 @@
     <?= session()->get('fail') ?>
 
       <?php endif;?>
-    <table class='table table-responsive '>
+    <table class='table  '>
             <thead>
                 <tr>
                     <th>Tank </th>

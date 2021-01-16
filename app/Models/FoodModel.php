@@ -10,7 +10,7 @@ class FoodModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['name', 'qty'];
+    protected $allowedFields = ['name', 'qty','type'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';

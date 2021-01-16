@@ -6,14 +6,14 @@
             <!-- small card -->
             <div class="small-box bg-primary">
                 <div class="inner">
-                <h3>4</h3>
+                <h3><?= $fishcount ?></h3>
 
-                <p>Fish</p>
+                <p>Fish Type</p>
                 </div>
                 <div class="icon">
                 <i class="fas fa-fish"></i>
                 </div>
-                <a href="#" class="small-box-footer">
+                <a href="<?= base_url('fish')?>" class="small-box-footer">
                 More info <i class="fas fa-arrow-circle-right"></i>
                 </a>
             </div>
@@ -23,14 +23,14 @@
             <!-- small card -->
             <div class="small-box bg-primary">
                 <div class="inner">
-                <h3>70</h3>
+                <h3><?= $productcount ?></h3>
 
                 <p>Product</p>
                 </div>
                 <div class="icon">
                 <i class="fab fa-product-hunt"></i>
                 </div>
-                <a href="#" class="small-box-footer">
+                <a href="product" class="small-box-footer">
                 More info <i class="fas fa-arrow-circle-right"></i>
                 </a>
             </div>
@@ -39,13 +39,14 @@
             <!-- small card -->
             <div class="small-box bg-primary">
                 <div class="inner">
-                <h3>16</h3>
+                <h3><?= $staffcount ?></h3>
+                
                 <p>Staff</p>
                 </div>
                 <div class="icon">
                 <i class="fas fa-users"></i>
                 </div>
-                <a href="#" class="small-box-footer">
+                <a href="<?= base_url('staff')?>" class="small-box-footer">
                 More info <i class="fas fa-arrow-circle-right"></i>
                 </a>
             </div>
@@ -55,13 +56,14 @@
             <!-- small card -->
             <div class="small-box bg-primary">
                 <div class="inner">
-                <h3>5</h3>
+                <h3><?= $suppliercount ?></h3>
+                
                 <p>Suppliers</p>
                 </div>
                 <div class="icon">
                 <i class="fas fa-users"></i>
                 </div>
-                <a href="#" class="small-box-footer">
+                <a href="supplier" class="small-box-footer">
                 More info <i class="fas fa-arrow-circle-right"></i>
                 </a>
             </div>
@@ -73,14 +75,14 @@
             <!-- small card -->
             <div class="small-box bg-danger">
                 <div class="inner">
-                <h3>3500 NGN</h3>
+                <h3><?= $expense ?>  NGN</h3>
 
                 <p>Expenses</p>
                 </div>
                 <div class="icon">
                 <i class="fas fa-money-bill-alt"></i>
                 </div>
-                <a href="#" class="small-box-footer">
+                <a href="expense" class="small-box-footer">
                 More info <i class="fas fa-arrow-circle-right"></i>
                 </a>
             </div>
@@ -89,14 +91,14 @@
             <!-- small card -->
             <div class="small-box bg-success">
                 <div class="inner">
-                <h3>14000 NGN</h3>
+                <h3><?= $sale ?? '0.00' ?> NGN</h3>
 
                 <p>Sales</p>
                 </div>
                 <div class="icon">
                 <i class="fas fa-money-bill-wave"></i>
                 </div>
-                <a href="#" class="small-box-footer">
+                <a href="report/financial" class="small-box-footer">
                 More info <i class="fas fa-arrow-circle-right"></i>
                 </a>
             </div>
@@ -105,14 +107,14 @@
             <!-- small card -->
             <div class="small-box bg-warning">
                 <div class="inner">
-                <h3>4000 NGN</h3>
+                <h3><?= $purchase ?> NGN</h3>
 
                 <p>Purchase</p>
                 </div>
                 <div class="icon">
                 <i class="fas fa-receipt"></i>
                 </div>
-                <a href="#" class="small-box-footer">
+                <a href="purchase" class="small-box-footer">
                 More info <i class="fas fa-arrow-circle-right"></i>
                 </a>
             </div>
