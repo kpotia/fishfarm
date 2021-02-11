@@ -15,39 +15,8 @@ follow this step to setup the system
   - baseurl
   - environment variable
   - etc.
-
-## Todo
-
-- [x] Fish: add,edit,update fish details
-- [x] Fish Tank: add,edit,update fish tank details
-- [x] Food: add, edit, delete food
-- [x] Vaccine:
-- [x] Supplier:
-- [x] Client:
-- [x] Staff :
-- [x] Product:
-- [x] Vaccine History:
-  - [x] VH listing
-  - [x] add VH
-  - [x] view VH
-  - [x] view VH
-- [x] Food History:
-  - [x] fh listing
-  - [x] add food history
-  - [x] view food history
-- [x] Expenses:
-- [x] Purchase:
-- [ ] Sales
-  - [ ] order management
-- [ ] Setting:
-- [ ] Report:
-  - [ ] Fish
-  - [ ] Sales
-  - [ ] Purchase
-  - [ ] Expense
-  - [ ] financial
-- [ ] backup:
-
+  
+  
 ## Server Requirements
 
 PHP version 7.2 or higher is required, with the following extensions installed:
